@@ -110,7 +110,7 @@
         <div class="tulisan">
 
             <div class="successP">
-                Some Courses
+                Popular Courses
             </div>
         </div>
 
@@ -139,9 +139,8 @@
     <section class="bawah">
         <div class="bgBawah">
             <div class="content">
-                <h1>Work Now With Digital Creation</h1>
-                <p>Our company is a very professional company, with friendly service, modern homes and interest-free
-                    payments</p>
+                <h1>Join Now With Us</h1>
+                <p>Our company is a very professional company, with friendly service, modern homes and interest course</p>
             </div>
             <div class="button-container">
                 <button>Registrasi</button>
@@ -153,10 +152,10 @@
 
 <footer style="display: flex; align-items: center; justify-content: space-between; padding: 10px 50px;">
     <div class="left-content">
-        <h1>Digital Creation</h1>
+        <h1>GoldGen Academy</h1>
         <div class="pSingkat">
             <p>
-                Prebör domisaning. Kemkastrering. Fagt kaskade. Bist decissa.
+                
 
             </p>
             <div class="smf">
@@ -180,7 +179,7 @@
                 </div>
                 <div class="iconItem">
                     <i class="fas fa-envelope"></i>
-                    <span>digital.creation@gmail.com</span>
+                    <span>GoldGen.Academy@gmail.com</span>
                 </div>
                 <div class="iconItem">
                     <i class="fas fa-map-marker-alt"></i>
