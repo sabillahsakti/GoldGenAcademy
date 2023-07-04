@@ -143,7 +143,7 @@
                 <p>Our company is a very professional company, with friendly service, modern homes and interest course</p>
             </div>
             <div class="button-container">
-                <button>Registrasi</button>
+                <button>Register</button>
             </div>
         </div>
     </section>
