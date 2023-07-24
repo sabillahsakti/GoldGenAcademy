@@ -5,11 +5,10 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
+
 class AuthController extends Controller
 {
-   
-
-    //nampilin register
+       //nampilin register
     public function viewregister(){
         return view('register');
     }
@@ -24,7 +23,7 @@ class AuthController extends Controller
             'role'=> 'member',
         ]);
 
-        return redirect()->route('login');
+        return redirect('login');
     }
 
      //nampilin login
