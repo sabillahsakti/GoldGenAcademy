@@ -70,10 +70,11 @@
               <img class="img-fluid object-fit-cover rounded-4 shadow" src="" alt="">
             </div>
             <div class="colom kanan">
-                <form>
+                <form action="{{ route('login') }}" method="POST">
+                    @csrf
                     <div class="form-group">
-                      <label for="username">Username:</label>
-                      <input type="text" id="username" name="username" required>
+                      <label for="username">Email:</label>
+                      <input type="text" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                       <label for="password">Password:</label>

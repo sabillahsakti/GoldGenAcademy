@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -29,5 +29,23 @@ class AuthController extends Controller
      //nampilin login
      public function viewlogin(){
         return view('login');
+    }
+
+    public function login(Request $request)
+    {
+        $data = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        $isSuccessLogin = Auth::attempt($data);
+        
+        if ($isSuccessLogin){
+            return view('dashboard');
+        }
+        else{
+            return view('login');
+        }
+
     }
 }
