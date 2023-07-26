@@ -55,98 +55,43 @@
             </div>
 
             <div class="ltalk-container">
-                <button class="ltalk" onclick="window.location.href ='{{url('login')}}';">
+                <button class="ltalk" onclick="window.location.href ='order.html';">
                     Login
                 </button>
             </div>
         </div>
     </div>
 
-    <section class="tengah">
 
-        <div class="dwu">
-            Join Us !
+    <section class="login">
+        <div class="container">
+            <h2>Registration Form</h2>
+            <form action="{{ route('register') }}" method="POST">
+                @csrf
+              <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+              <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required> </textarea>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="number" id="phone" name="phone" required>
+              </div>
+              <button type="submit">Register</button>
+            </form>
         </div>
-
-        <div class="desc">
-            6666 People Have Gotten Jobs From Here
-        </div>
-
-        <div class="desc2">
-            With Us Get More Opportunities to Get Jobs in Technology
-        </div>
-
-        <div>
-            <button class="sap">
-                Click to Get Course Recommendation
-            </button>
-        </div>
-
-        <div class="socialMedia">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin"></i>
-        </div>
-
-
-    </section>
-
-    <section class="partner">
-        <div class="tp">
-            Trusted Partner
-        </div>
-
-        <div class="logoPartner">
-            <img src="Assets/images/Microsoft.png" alt="">
-            <img src="Assets/images/gmeet.png" alt="">
-            <img src="Assets/images/zoom.png" alt="">
-        </div>
-    </section>
-
-    <div class="ellipse2"></div>
-
-    <section class="courses">
-        <div class="tulisan">
-
-            <div class="successP">
-                Popular Courses
-            </div>
-        </div>
-
-        <div class="gambarP">
-            <div class="frameKiri">
-                <img src="Assets/images/projectimage1.png" alt="">
-                <h1>Website Design</h1>
-                <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
-            </div>
-
-            <div class="frameKanan">
-                <div class="fkAtas">
-                    <img src="Assets/images/projectimage1.png" alt="">
-                    <h1>Website Design</h1>
-                    <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
-                </div>
-                <div class="fkAtas">
-                    <img src="Assets/images/projectimage1.png" alt="">
-                    <h1>Website Design</h1>
-                    <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bawah">
-        <div class="bgBawah">
-            <div class="content">
-                <h1>Join Now With Us</h1>
-                <p>Our company is a very professional company, with friendly service, modern homes and interest course</p>
-            </div>
-            <div class="button-container">
-                <button>Register</button>
-            </div>
-        </div>
-    </section>
+      </section>
 
 </body>
 
