@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\DB;
 
 class RecommendationController extends Controller
 {
@@ -19,9 +20,22 @@ class RecommendationController extends Controller
         $response = Http::get('https://api-goldgen.koyeb.app/predik/' . urlencode($value));
         $data = $response->json();
 
-        // Process the API response data here
-        // You can return a view with the data or do something else with it
-        return view('recommendation', ['data' => $data]);
+        // Extract the values from the API response
+        $alternatives = [];
+        foreach ($data as $key => $valueArray) {
+            if (isset($valueArray[0])) {
+                $alternatives[] = $valueArray[0];
+            }
+        }
+
+        // Use the extracted values in your query
+        $results = DB::table('courses')
+            ->join('fields', 'courses.field_id', '=', 'fields.id')
+            ->select('courses.name', 'courses.price', 'courses.image', 'fields.name AS field')
+            ->whereIn('fields.name', $alternatives)
+            ->get();
+        // Pass the results to the view
+        return view('recommendation', ['results' => $results]);
     }
 
 }

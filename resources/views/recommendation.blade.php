@@ -188,11 +188,11 @@
             <button type="submit" id="recommendationButton">Recommendation</button>
         </form>
 
-        @if(isset($data))
+        @if(isset($results))
         <div class="result">
             <h3>Result:</h3>
             <pre>
-                {{ print_r($data) }}
+                {{ print_r($results) }}
             </pre>
         </div>
         @endif
