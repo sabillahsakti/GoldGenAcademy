@@ -42,6 +42,97 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 100vh;
+          margin: 0;
+          background: #FFFFFF;
+        }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin: 83px auto;
+    }
+
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #0041E8;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0034b3;
+    }
+
+    .result-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .result-card {
+            flex-basis: calc(33.33% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .result-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Limit to 3 rows */
+        @media (max-width: 800px) {
+            .result-card {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .result-card {
+                flex-basis: calc(100% - 20px);
+            }
+        }
+
     </style>
 
     <script>
@@ -119,91 +210,35 @@
         </div>
     </div>
 
-    <section class="tengah">
-
-        <div class="dwu">
-            Join Us !
-        </div>
-
-        <div class="desc">
-            6666 People Have Gotten Jobs From Here
-        </div>
-
-        <div class="desc2">
-            With Us Get More Opportunities to Get Jobs in Technology
-        </div>
-
-        <div>
-            <button class="sap" onclick="window.location.href ='{{url('recommendation')}}';">
-                Click to Get Course Recommendation
-            </button>
-        </div>
-
-        <div class="socialMedia">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin"></i>
-        </div>
-
-
-    </section>
-
-    <section class="partner">
-        <div class="tp">
-            Trusted Partner
-        </div>
-
-        <div class="logoPartner">
-            <img src="Assets/images/Microsoft.png" alt="">
-            <img src="Assets/images/gmeet.png" alt="">
-            <img src="Assets/images/zoom.png" alt="">
-        </div>
-    </section>
-
-    <div class="ellipse2"></div>
-
-    <section class="courses">
-        <div class="tulisan">
-
-            <div class="successP">
-                Popular Courses
+    <div class="container">
+        <form action="{{ route('submit.recommendation') }}" method="POST">
+            @csrf
+            <div class="input-wrapper">
+                <label for="recommendationInput">Enter your Interest:</label>
+                <textarea name="recommendationInput" id="recommendationInput" rows="4"></textarea>
             </div>
-        </div>
+            <button type="submit" id="recommendationButton">Recommendation</button>
+        </form>
 
-        <div class="gambarP">
-            <div class="frameKiri">
-                <img src="Assets/images/projectimage1.png" alt="">
-                <h1>Website Design</h1>
-                <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
-            </div>
-
-            <div class="frameKanan">
-                <div class="fkAtas">
-                    <img src="Assets/images/projectimage1.png" alt="">
-                    <h1>Website Design</h1>
-                    <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
+        @if(isset($results))
+        <h1>Test Result:</h1>
+        <div class="result-container">
+            @foreach($results as $result)
+                <div class="result-card">
+                    <h3>{{ $result->name }}</h3>
+                    <p>Price: {{ $result->price }}</p>
+                    <p>Field: {{ $result->field }}</p>
+                    <img class="result-image" src="{{ asset($result->image) }}" alt="{{ $result->name }}">
                 </div>
-                <div class="fkAtas">
-                    <img src="Assets/images/projectimage1.png" alt="">
-                    <h1>Website Design</h1>
-                    <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
-                </div>
-            </div>
+            @endforeach
         </div>
-    </section>
+    @else
+        <p>No results yet. Please submit the form.</p>
+    @endif
 
-    <section class="bawah">
-        <div class="bgBawah">
-            <div class="content">
-                <h1>Join Now With Us</h1>
-                <p>Our company is a very professional company, with friendly service, modern homes and interest course</p>
-            </div>
-            <div class="button-container">
-                <button>Register</button>
-            </div>
-        </div>
-    </section>
+    </div>
+
+    
 
 </body>
 

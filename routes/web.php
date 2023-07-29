@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,4 +23,6 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('index')->middleware(['auth']);
 
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::post('/submit-recommendation', [RecommendationController::class, 'submit'])->name('submit.recommendation');
