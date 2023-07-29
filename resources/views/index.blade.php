@@ -96,7 +96,7 @@
                 <a href="home.html">Home</a>
                 <a href="{{ url('about') }}">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
-                <a href="portofolio.html">Testimoni</a>
+                <a href="{{ url('testimoni') }}">Testimoni</a>
             </div>
 
             <div class="ltalk-container">
