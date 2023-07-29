@@ -57,7 +57,7 @@
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      max-width: 400px;
+      max-width: 600px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -100,6 +100,38 @@
     button:hover {
       background-color: #0034b3;
     }
+
+    .result-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .result-card {
+            flex-basis: calc(33.33% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .result-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Limit to 3 rows */
+        @media (max-width: 800px) {
+            .result-card {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .result-card {
+                flex-basis: calc(100% - 20px);
+            }
+        }
 
     </style>
 
@@ -182,21 +214,31 @@
         <form action="{{ route('submit.recommendation') }}" method="POST">
             @csrf
             <div class="input-wrapper">
-                <label for="recommendationInput">Enter your recommendation:</label>
+                <label for="recommendationInput">Enter your Interest:</label>
                 <textarea name="recommendationInput" id="recommendationInput" rows="4"></textarea>
             </div>
             <button type="submit" id="recommendationButton">Recommendation</button>
         </form>
 
         @if(isset($results))
-        <div class="result">
-            <h3>Result:</h3>
-            <pre>
-                {{ print_r($results) }}
-            </pre>
+        <h1>Test Result:</h1>
+        <div class="result-container">
+            @foreach($results as $result)
+                <div class="result-card">
+                    <h3>{{ $result->name }}</h3>
+                    <p>Price: {{ $result->price }}</p>
+                    <p>Field: {{ $result->field }}</p>
+                    <img class="result-image" src="{{ asset($result->image) }}" alt="{{ $result->name }}">
+                </div>
+            @endforeach
         </div>
-        @endif
+    @else
+        <p>No results yet. Please submit the form.</p>
+    @endif
+
     </div>
+
+    
 
 </body>
 
