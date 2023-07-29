@@ -960,29 +960,47 @@
     font-size: 35px;
 }
 
-/* Media Query for smaller screens (max-width 600px) */
-@media (max-width: 600px) {
-    /* Adjust styles for smaller screens here */
-
-    /* Example: Reduce font size for header-h2 and header-p */
+/* Media Query for Desktop Devices */
+@media screen and (min-width: 768px) {
     .header-h2 {
-        font-size: 28px;
+        font-size: 45px;
     }
 
     .header-p {
+        font-size: 40px;
+        width: 60%;
+    }
+
+    .team-h2 {
+        font-size: 40px;
+    }
+
+    .cewe-img,
+    .cewe-img2 {
+        height: 400px;
+        width: 300px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+    .header-h2 {
+        font-size: 24px;
+    }
+
+    .header-p {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .team-h2 {
         font-size: 28px;
     }
 
-    /* Example: Adjust image size for cewe-img and cewe-img2 */
     .cewe-img,
     .cewe-img2 {
         height: 300px;
         width: 200px;
-    }
-
-    /* Example: Modify width for aContainer-vm */
-    .aContainer-vm {
-        padding-top: 30px;
     }
 }
 
