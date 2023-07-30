@@ -27,6 +27,9 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/register', [AuthController::class, 'viewregister']);
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
+Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
+Route::get('/courses/{id}/purchase', [CourseController::class, 'purchase'])->name('courses.purchase');
+
 Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('index')->middleware(['auth']);
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
