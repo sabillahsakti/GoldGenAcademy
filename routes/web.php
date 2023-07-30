@@ -28,7 +28,11 @@ Route::get('/register', [AuthController::class, 'viewregister']);
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
-Route::get('/courses/{id}/purchase', [CourseController::class, 'purchase'])->name('courses.purchase');
+Route::match(['get', 'post'], '/courses/{id}/purchase', [CourseController::class, 'purchase'])->name('courses.purchase');
+Route::post('/courses/confirmation', [CourseController::class, 'confirmation'])->name('courses.confirmation');
+Route::get('/confirmation/thankyou', [CourseController::class, 'confirmationThankYou'])->name('confirmation.thankyou');
+Route::post('/courses/{id}/payment-confirmation', [CourseController::class, 'paymentConfirmation'])->name('payment.confirmation');
+
 
 Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('index')->middleware(['auth']);
 

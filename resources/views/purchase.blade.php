@@ -56,6 +56,21 @@
         a:hover {
             background-color: #0034b3;
         }
+
+        .payment-form button[type="submit"] {
+            background-color: #0041E8;
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-form button[type="submit"]:hover {
+            background-color: #0034b3;
+        }
     </style>
 </head>
 
@@ -81,6 +96,21 @@
         </table>
 
         <a href="{{ route('courses.index') }}">Back to Courses</a>
+
+        <div class="payment-section">
+            <h2>Payment Confirmation</h2>
+            <p>Please upload an image of your payment confirmation to complete the payment process.</p>
+
+            <form action="{{ route('payment.confirmation', ['id' => $course->id]) }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="payment-form">
+                    <input type="file" name="payment_image" id="payment_image">
+                    <label for="payment_image">Upload Payment Image</label>
+                </div>
+                <button type="submit">Confirm Payment</button>
+            </form>
+
+        </div>
     </div>
 
 </body>
