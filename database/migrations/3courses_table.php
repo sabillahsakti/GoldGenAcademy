@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('field_id');
             $table->timestamps();
 
-            $table->foreign('field_id')->references('id')->on('fields');
+
 
 
     
