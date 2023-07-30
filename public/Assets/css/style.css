@@ -842,6 +842,7 @@
     transition: opacity 0.3s, visibility 0.3s;
   }
 
+  
 
 .aContainer{
     padding-top: 50px;
@@ -869,8 +870,7 @@
     justify-content: center;
     align-items: center;
 }
-.table-vm{
-}
+
 .title-vm td{ 
     padding-left: 40px;
     padding-right: 40px;
@@ -928,3 +928,4 @@
 .a1-h2{
     font-size: 35px;
 }
+  
