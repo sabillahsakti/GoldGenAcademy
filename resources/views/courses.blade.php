@@ -14,6 +14,25 @@
             justify-content: space-between;
             padding: 10px 50px;
         }
+        button {
+            width: 120px;
+        }
+
+        button {
+            background-color: #0041E8;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0034b3;
+        }
     </style>
 </head>
 <body>
@@ -40,43 +59,20 @@
     </div>
 
     <div class="services-section">
-        <h2>Our Services</h2>
+        <h2>List Courses</h2>
         <p>
-            At Digital Creation, we offer a range of services to meet your design needs. Our expertise includes:
+            Choose the courses that you want    
         </p>
         
         <div class="service-card">
+            @foreach($courses as $course)
             <div class="service">
-                <img src="Assets/images/uiux.png" alt="UI/UX Design">
-                <h3>UI/UX Design</h3>
-                <p>We create intuitive and visually appealing user interfaces that enhance the user experience, ensuring your website or application is both user-friendly and visually engaging.</p>
+                <img src="{{ asset($course->image) }}" alt="Course Image">
+                <h3>{{ $course->name }}</h3>
+                <h5>{{ $course->price }}</h5>
+                <button onclick="window.location.href = '{{ route('courses.purchase', $course->id) }}'">Purchases</button>
             </div>
-        
-            <div class="service">
-                <img src="Assets/images/prototype.png" alt="Prototype">
-                <h3>Prototype</h3>
-                <p>We develop interactive prototypes to help you visualize and refine your design ideas, allowing for quick iterations and feedback before moving on to the development phase.</p>
-            </div>
-        
-            <div class="service">
-                <img src="Assets/images/webdesign.png" alt="Web Design">
-                <h3>Web Design</h3>
-                <p>Our team of experienced designers will create stunning and functional websites that align with your brand identity, ensuring a seamless user experience across different devices and platforms.</p>
-            </div>
-        </div>
-        
-        <div class="service-card">
-            <div class="service">
-                <img src="Assets/images/landingpage.png" alt="Landing Page">
-                <h3>Landing Page</h3>
-                <p>We specialize in designing captivating landing pages that drive conversions and effectively communicate your message, helping you achieve your marketing goals.</p>
-            </div>
-        
-            <div class="service">
-                <img src="Assets/images/mobile.png" alt="Mobile Design">
-                <h3>Mobile Design</h3>
-                <p>We design mobile applications with a focus on user-centric design principles, delivering seamless and engaging experiences across various mobile platforms.</p>
-            </div>
+            @endforeach
         </div>
     </div>
 </body>
