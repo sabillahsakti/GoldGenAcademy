@@ -8,18 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class order extends Model
 {
     protected $fillable = [
-        'name',
-        'user_id',
-        'course_id',
+        'name', 'user_id', 'course_id', 'payment_image', 'status',
     ];
 
-    // Define the relationship with the User model
+    // Define relationships
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    // Define the relationship with the Course model
     public function course()
     {
         return $this->belongsTo(Course::class);
