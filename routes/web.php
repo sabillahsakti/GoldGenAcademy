@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-
+Route::get('/about', function () {
+    return view('about');
+});
 Route::get('/courses', function () {
     return view('courses');
 });
@@ -16,6 +18,11 @@ Route::get('/courses', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/testimoni', function () {
+    return view('testimoni');
+});
+
 
 Route::get('/recommendation', function () {
     return view('recommendation');

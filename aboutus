@@ -1,0 +1,139 @@
+[33mcommit 8612975b019242f2c5e3dcc60a04074a47adb79c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: ffba755 63f1901
+Author: Mansa06 <radifam06@gmail.com>
+Date:   Thu Jul 27 08:45:49 2023 +0700
+
+    about us
+
+[33mcommit ffba755da37bafc44c0c23003eef1073860e4203[m
+Author: Mansa06 <radifam06@gmail.com>
+Date:   Thu Jul 27 08:42:09 2023 +0700
+
+    about us
+
+[33mcommit 63f1901453ef57eb33c93a24ac01f0b9ac9a40a6[m[33m ([m[1;31mupstream/main[m[33m)[m
+Merge: 2014802 e65b747
+Author: Sabil <43565892+sabillahsakti@users.noreply.github.com>
+Date:   Wed Jul 26 19:36:45 2023 +0700
+
+    Merge pull request #7 from sabillahsakti/sabill
+    
+    function login and show username in index
+
+[33mcommit e65b747705562a969bdc001b477da6c4f37cf06d[m[33m ([m[1;31mupstream/sabill[m[33m, [m[1;31morigin/sabill[m[33m)[m
+Author: Sabillah Sakti <sabillahsakti@Sabillahs-MacBook-Air.local>
+Date:   Wed Jul 26 19:32:14 2023 +0700
+
+    function login and show username in index
+
+[33mcommit 2014802af2bda6b588ee4d6104d2ef77a47e7458[m
+Merge: 570ad34 8d5e1ed
+Author: Sabil <43565892+sabillahsakti@users.noreply.github.com>
+Date:   Wed Jul 26 18:13:34 2023 +0700
+
+    Merge pull request #6 from sabillahsakti/marzuq
+
+[33mcommit 8d5e1ed2f8fc6db4acf92000edc84cf36e38f879[m[33m ([m[1;31mupstream/marzuq[m[33m, [m[1;31morigin/marzuq[m[33m)[m
+Author: Diaz  Luthfi <diazluthfi07@gmail.com>
+Date:   Wed Jul 26 00:35:34 2023 +0700
+
+    Add Login
+
+[33mcommit 986647a5cc33cb535cc7ba7d71a4d3571898580e[m
+Author: Diaz  Luthfi <diazluthfi07@gmail.com>
+Date:   Mon Jul 24 14:19:07 2023 +0700
+
+    add register
+
+[33mcommit 2d13eefe81a48a867d3b61a4f26ab0aa9a460fc1[m
+Author: Diaz  Luthfi <diazluthfi07@gmail.com>
+Date:   Sun Jul 23 21:28:40 2023 +0700
+
+    add registrasi
+
+[33mcommit 570ad34520875f0b2dd9b78e80f053fa0dd6acc0[m
+Author: Sabillah Sakti <sabillahsakti@Sabillahs-MacBook-Air.local>
+Date:   Thu Jul 13 20:30:35 2023 +0700
+
+    other commit
+
+[33mcommit 7e938edc77f57efd3f9f1da26480a404353462e3[m
+Merge: 8cd8988 f9ff2c9
+Author: Sabil <43565892+sabillahsakti@users.noreply.github.com>
+Date:   Sun Jul 9 16:12:48 2023 +0700
+
+    Merge pull request #5 from sabillahsakti/marzuq
+    
+    add migrate for database
+
+[33mcommit f9ff2c9256d25ac62723e892e492bc31e4c44818[m
+Author: Diaz  Luthfi <diazluthfi07@gmail.com>
+Date:   Sun Jul 9 16:10:41 2023 +0700
+
+    udah
+
+[33mcommit 8cd898898532d03a544e1599e18281f62025b3eb[m
+Merge: 8303b37 16dd2c0
+Author: Sabil <43565892+sabillahsakti@users.noreply.github.com>
+Date:   Sun Jul 9 14:52:24 2023 +0700
+
+    Merge pull request #4 from sabillahsakti/marzuq
+    
+    add database
+
+[33mcommit 16dd2c011171c27118c1ad83b8fe387505b731aa[m
+Author: Diaz  Luthfi <diazluthfi07@gmail.com>
+Date:   Sun Jul 9 14:24:16 2023 +0700
+
+    udh bil
+
+[33mcommit 8303b3776a6a9ec8ae713d9093b56150f6384b5e[m
+Merge: 51b833b 878384d
+Author: Sabil <43565892+sabillahsakti@users.noreply.github.com>
+Date:   Tue Jul 4 13:50:10 2023 +0700
+
+    Merge pull request #3 from sabillahsakti/sabil
+    
+    update index
+
+[33mcommit 878384d8cd0568132e38b86c5077699467433a71[m
+Author: Sabillah Sakti <sabillahsakti@Sabillahs-MacBook-Air.local>
+Date:   Tue Jul 4 13:47:46 2023 +0700
+
+    update index
+
+[33mcommit 51b833bcd1903b9898fb0a3ce11c8532402c2e70[m
+Merge: 3c2953e bbd1fcb
+Author: Sabil <43565892+sabillahsakti@users.noreply.github.com>
+Date:   Tue Jul 4 13:46:34 2023 +0700
+
+    Merge pull request #2 from sabillahsakti/sabil
+    
+    Update index
+
+[33mcommit bbd1fcb06d7d20bc5c6d94ab4decedb614c803b8[m
+Author: Sabillah Sakti <sabillahsakti@Sabillahs-MacBook-Air.local>
+Date:   Tue Jul 4 13:45:41 2023 +0700
+
+    Update index
+
+[33mcommit 3c2953ec0062d212b1630a74c5b0afa694434a04[m
+Merge: 62d442c ecd7aee
+Author: Diaz  Luthfi <49891869+diazluthfi@users.noreply.github.com>
+Date:   Sat Jul 1 17:04:49 2023 +0700
+
+    Merge pull request #1 from sabillahsakti/marzuq
+    
+    add index
+
+[33mcommit ecd7aee74a24e7f3c0ecf68684fb5c6b09abb45c[m
+Author: Diaz  Luthfi <diazluthfi07@gmail.com>
+Date:   Sat Jul 1 17:03:45 2023 +0700
+
+    add index
+
+[33mcommit 62d442ca4da06ab6aa106f21d71b3280f25da51a[m
+Author: Sabil <43565892+sabillahsakti@users.noreply.github.com>
+Date:   Sat Jul 1 16:54:43 2023 +0700
+
+    Initial commit

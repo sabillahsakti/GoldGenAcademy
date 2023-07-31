@@ -842,28 +842,36 @@
     transition: opacity 0.3s, visibility 0.3s;
   }
 
-  
 
-.aContainer{
+/* Base styles for aContainer */
+.aContainer {
     padding-top: 50px;
     text-align: center;
     width: 100%;
 }
-.aContainer-Header{
+
+/* Styles for aContainer-Header */
+.aContainer-Header {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.header-h2{
+
+/* Styles for header-h2 */
+.header-h2 {
     font-size: 35px;
 }
-.header-p{
+
+/* Styles for header-p */
+.header-p {
     font-size: 35px;
     width: 80%;
     color: gray;
 }
-.aContainer-vm{
+
+/* Styles for aContainer-vm */
+.aContainer-vm {
     padding-top: 60px;
     text-align: center;
     display: flex;
@@ -871,61 +879,288 @@
     align-items: center;
 }
 
-.title-vm td{ 
+/* Styles for title-vm td */
+.title-vm td {
     padding-left: 40px;
     padding-right: 40px;
     font-size: 35px;
     text-align: center;
-
 }
-.p-bold{
+
+/* Styles for p-bold */
+.p-bold {
     font-weight: bold;
 }
-.p-gray{
+
+/* Styles for p-gray */
+.p-gray {
     color: darkgrey;
 }
-.Container-team{
+
+/* Styles for Container-team */
+.Container-team {
     padding-top: 50px;
     text-align: center;
     width: 100%;
 }
-.team-p{
+
+/* Styles for team-p */
+.team-p {
     font-size: 20px;
     width: 80%;
     color: darkgray;
 }
-.team-h2{
+
+/* Styles for team-h2 */
+.team-h2 {
     font-size: 35px;
 }
-.aContainer-team{
+
+/* Styles for aContainer-team */
+.aContainer-team {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.cewe-img{
+
+/* Styles for cewe-img */
+.cewe-img {
     height: 550px;
     width: 400px;
     border-radius: 10px;
 }
-.cewe-img2{
+
+/* Styles for cewe-img2 */
+.cewe-img2 {
     height: 550px;
     width: 400px;
     border-radius: 10px;
 }
-.Container-atable{
+
+/* Styles for Container-atable */
+.Container-atable {
     display: flex;
     justify-content: center;
     padding-top: 60px;
-    
 }
-.atable{
+
+/* Styles for atable */
+.atable {
     width: 80%;
 }
-.tr1-atable{
+
+/* Styles for tr1-atable */
+.tr1-atable {
     text-align: left;
 }
-.a1-h2{
+
+/* Styles for a1-h2 */
+.a1-h2 {
     font-size: 35px;
 }
-  
+
+/* Media Query for Desktop Devices */
+@media screen and (min-width: 768px) {
+    .header-h2 {
+        font-size: 45px;
+    }
+
+    .header-p {
+        font-size: 40px;
+        width: 60%;
+    }
+
+    .team-h2 {
+        font-size: 40px;
+    }
+
+    .cewe-img,
+    .cewe-img2 {
+        height: 400px;
+        width: 300px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+    .header-h2 {
+        font-size: 24px;
+    }
+
+    .header-p {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .team-h2 {
+        font-size: 28px;
+    }
+
+    .cewe-img,
+    .cewe-img2 {
+        height: 300px;
+        width: 200px;
+    }
+}
+
+
+
+/* Base styles for tContainer */
+.tContainer {
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Styles for tContainer-header */
+.tContainer-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 0px;
+    height: 50px;
+}
+
+/* Styles for tContainerHeader-h2 */
+.tContainerHeader-h2 {
+    font-size: 25px;
+    width: 100%;
+    height: 15px;
+}
+
+/* Styles for tContainerHeader-p */
+.tContainerHeader-p {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    color: gray;
+}
+
+/* Styles for tContainer-isi */
+.tContainer-isi {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Styles for tContainer-isi h2 */
+.tContainer-isi h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles for tContainer-isi p */
+.tContainer-isi p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+/* Styles for isi */
+.isi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for isi .kotak */
+.isi .kotak {
+    flex-basis: calc(33.33% - 20px);
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+}
+
+/* Styles for isi .kotak img */
+.isi .kotak img {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 60px;
+}
+
+/* Styles for isi .kotak h3 */
+.isi .kotak h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styles for isi .kotak .atasSendiri */
+.isi .kotak .atasSendiri {
+    font-size: 16px;
+    color: black;
+}
+
+/* Styles for daleman */
+.daleman {
+    text-align: left;
+    width: 400px;
+}
+
+/* Styles for bawahSendiri */
+.bawahSendiri {
+    font-size: 16px;
+    color: gray;
+}
+
+/* Media Query for desktop devices (min-width 768px) */
+@media (min-width: 768px) {
+    /* Example: Modify the width for daleman */
+    .daleman {
+        width: 400px;
+    }
+}
+
+/* Media Query for mobile devices (max-width 767px) */
+@media (max-width: 767px) {
+    /* Adjust styles for mobile devices here */
+
+    /* Example: Reduce font size for tContainerHeader-h2 */
+    .tContainerHeader-h2 {
+        font-size: 20px;
+    }
+
+    /* Example: Reduce font size for tContainerHeader-p */
+    .tContainerHeader-p {
+        font-size: 12px;
+    }
+
+    /* Example: Modify the width for daleman */
+    .daleman {
+        width: 100%;
+    }
+
+    /* Example: Adjust the flex-basis for isi .kotak */
+    .isi .kotak {
+        flex-basis: 100%;
+    }
+
+    /* Example: Modify the width and height for isi .kotak img */
+    .isi .kotak img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Example: Adjust the font size for isi .kotak h3 */
+    .isi .kotak h3 {
+        font-size: 18px;
+    }
+
+    /* Example: Adjust the font size for isi .kotak .atasSendiri */
+    .isi .kotak .atasSendiri {
+        font-size: 14px;
+    }
+
+    /* Example: Adjust the font size for bawahSendiri */
+    .bawahSendiri {
+        font-size: 14px;
+    }
+}
