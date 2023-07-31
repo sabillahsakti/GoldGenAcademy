@@ -5,6 +5,11 @@ use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/layout', function () {
+    return view('layout.master');
+});
+
+
 Route::get('/', function () {
     return view('index');
 });
