@@ -24,8 +24,8 @@
     
         <div class="menu-container">
             <div class="menu">
-                <a href="home.html">Home</a>
-                <a href="about.html">About</a>
+                <a href="{{url('/')}}">Home</a>
+                <a href="{{url("about")}}">About</a>
                 <a href="services.html">Services</a>
                 <a href="portofolio.html">Portfolio</a>
                 <a href="pricing.html">Pricing</a>

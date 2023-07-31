@@ -48,7 +48,7 @@
 
         <div class="menu-container">
             <div class="menu">
-                <a href="home.html">Home</a>
+                <a href="{{url('/')}}">Home</a>
                 <a href="about.html">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
                 <a href="portofolio.html">Testimoni</a>
