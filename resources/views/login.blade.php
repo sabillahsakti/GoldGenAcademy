@@ -15,6 +15,92 @@
 
     <style>
 
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.colom {
+  flex: 1;
+}
+
+.kiri {
+  padding-right: 20px;
+}
+
+.kanan {
+  padding-left: 20px;
+}
+
+/* Styles for the form */
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ... (previously defined CSS rules) ... */
+
+.button-container {
+  display: inline-block;
+  justify-content: flex-end; /* Adjust this to flex-start, center, or space-between as per your preference */
+  align-items: center;
+  gap: 10px; /* Adjust the gap between buttons */
+}
+
+.button-container button,
+.button-container a {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button {
+  background-color: #007bff;
+}
+
+.button-container a {
+  background-color: #007bff;
+}
+
+.button-container button:hover,
+.button-container a:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* ... (previously defined CSS rules) ... */
+
     </style>
 
     <script>
@@ -73,19 +159,20 @@
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                      <label for="username">Email:</label>
+                      <label for="username">Alamat Email atau Nama Pengguna:</label>
                       <input type="text" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                       <label for="password">Password:</label>
                       <input type="password" id="password" name="password" required>
                     </div>
-                    <div>
+                    <div class="button-container">
                         <button type="submit">Login</button>
+                        <a href="{{url("register")}}" type="button">Register</a>
                     </div>
-                    <div>
-                        <a href="{{url("register")}}" type="button"> Register </a>
-                    </div>
+                    <!-- <div>
+                        <a href="{{url("register")}}" type="button" style="display: inline-block; margin-top: 10px; padding: 10px 20px; color: #fff; text-decoration: none; border: none; border-radius: 4px; background-color: #007bff;">Register</a>
+                    </div> -->
             </div>
           </div>
         </div>
@@ -98,8 +185,6 @@
         <h1>GoldGen Academy</h1>
         <div class="pSingkat">
             <p>
-                
-
             </p>
             <div class="smf">
                 <i class="fab fa-instagram"></i>
