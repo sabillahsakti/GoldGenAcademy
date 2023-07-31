@@ -1,59 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="Assets/css/style.css">
-
-    <script src='main.js'></script>
-    <title>About</title>
-</head>
-
-<body>
-    <script>
-        window.onscroll = function() {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollBtn").style.display = "block";
-            } else {
-                document.getElementById("scrollBtn").style.display = "none";
-            }
-        }
-
-        function scrollToTop() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-    </head>
-
-    <body style="background: #FFFFFF;">
-        <div id="scrollBtn" onclick="scrollToTop()">
-            &uarr;
-        </div>
-        <div class="navbar">
-            <div class="title">
-                GoldGen Academy
-            </div>
-
-            <div class="menu-container">
-                <div class="menu">
-                    <a href="{{ url('') }}">Home</a>
-                    <a href="{{ url('about') }}">About</a>
-                    <a href="{{ url('courses') }}">Courses</a>
-                    <a href="portofolio.html">Portfolio</a>
-                    <a href="pricing.html">Pricing</a>
-                </div>
-            </div>
-        </div>
-
+@section('content')
         <div class="aContainer">
             <h2 class="header-h2">About Us</h2>
             <div class="aContainer-Header">
@@ -178,45 +125,4 @@
                 </div>
 
             </div>
-    </body>
-    <footer style="display: flex; align-items: center; justify-content: space-between; padding: 10px 50px;">
-        <div class="left-content">
-            <h1>GoldGen Academy</h1>
-            <div class="pSingkat">
-                <p>
-
-
-                </p>
-                <div class="smf">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-whatsapp"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-twitter"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="right-content">
-            <div class="contact">
-
-                <div class="iconContact">
-                    <h2>Contact</h2>
-                    <div class="iconItem">
-                        <i class="fas fa-phone"></i>
-                        <span>(406) 555-0120</span>
-                    </div>
-                    <div class="iconItem">
-                        <i class="fas fa-envelope"></i>
-                        <span>GoldGen.Academy@gmail.com</span>
-                    </div>
-                    <div class="iconItem">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Jl. Karang Rejo VII No.9 Wonokromo</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</html>
+            @endsection
