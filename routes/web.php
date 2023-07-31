@@ -18,8 +18,6 @@ Route::get('/courses', function () {
 Route::get('/about', function () {
     return view('about');
 });
-<<<<<<< HEAD
-=======
 
 Route::get('/testimoni', function () {
     return view('testimoni');
@@ -30,7 +28,6 @@ Route::get('/recommendation', function () {
     return view('recommendation');
 });
 
->>>>>>> 6b5e9cbca9018f9c519bb6d36538498811017ec1
 Route::get('/login', [AuthController::class, 'viewlogin']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
@@ -47,8 +44,5 @@ Route::post('/courses/{id}/payment-confirmation', [CourseController::class, 'pay
 Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('index')->middleware(['auth']);
 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-<<<<<<< HEAD
-=======
 
 Route::post('/submit-recommendation', [RecommendationController::class, 'submit'])->name('submit.recommendation');
->>>>>>> 6b5e9cbca9018f9c519bb6d36538498811017ec1
