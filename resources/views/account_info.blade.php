@@ -42,6 +42,23 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+        .btn-change-password {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            color: white;
+            background-color: #0041E8;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-change-password:hover {
+            background-color: #0031b8;
+        }
+
     </style>
 
     <script>
@@ -92,24 +109,24 @@
 
         <div class="menu-container">
             <div class="menu">
-                <a href="home.html">Home</a>
+                <a href="{{ url('/')}}">Home</a>
                 <a href="{{ url('about') }}">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
                 <a href="{{ url('testimoni') }}">Testimoni</a>
             </div>
 
             <div class="ltalk-container">
-                @if (session('user'))
+                @if(session('user'))
                     <div class="dropdown">
                         <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
                         <div class="dropdown-content">
-                            <a href="#">Info akun</a>
-                            <a href="#">Daftar kelas</a>
+                            <a href="{{ url('account') }}">Account Information</a>
+                            <a href="{{ route('myCourses') }}">My Courses</a>
                             <a href="{{ route('logout') }}">Logout</a>
                         </div>
                     </div>
                 @else
-                    <button class="ltalk" onclick="window.location.href ='{{ url('login') }}';">
+                    <button class="ltalk" onclick="window.location.href ='{{url('login')}}';">
                         Login
                     </button>
                 @endif
@@ -170,11 +187,18 @@
                         </div>
                     </div>
                 </div>
+                <button onclick="window.location.href='{{route('changePasswordForm')}}';" class="btn-change-password">
+                    Change Password
+                </button>
+
             </div>
         </div>
     </div>
+    
     </div>
+    
     </div>
+    
 </body>
 
 </html>
