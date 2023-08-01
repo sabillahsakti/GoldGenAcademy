@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CertificateController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/layout', function () {
@@ -13,6 +15,11 @@ Route::get('/layout', function () {
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/', function () {
+    return view('index');
+});
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -33,11 +40,17 @@ Route::get('/recommendation', function () {
     return view('recommendation');
 });
 
+Route::get('/myCourses', function () {
+    return view('myCourses');
+});
+
 Route::get('/login', [AuthController::class, 'viewlogin']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/register', [AuthController::class, 'viewregister']);
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
 Route::match(['get', 'post'], '/courses/{id}/purchase', [CourseController::class, 'purchase'])->name('courses.purchase');
@@ -51,3 +64,8 @@ Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('inde
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/submit-recommendation', [RecommendationController::class, 'submit'])->name('submit.recommendation');
+
+Route::get('/myCourses', [AuthController::class, 'myCourses'])->name('myCourses');
+
+Route::get('/certificate/{courseId}', [CertificateController::class, 'showCertificate'])->middleware('auth')->name('certificate');
+Route::get('/download-certificate/{courseId}', [CertificateController::class, 'downloadCertificate'])->middleware('auth')->name('downloadCertificate');
