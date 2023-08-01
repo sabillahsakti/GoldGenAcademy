@@ -101,7 +101,7 @@ class CourseSeeder extends Seeder
 
         foreach ($data as $item) {
             // Menyalin file gambar dari direktori sumber ke direktori penyimpanan gambar
-            $imagePath = 'public/assets/images/' . $item['image'];
+            $imagePath = 'public/Assets/images/' . $item['image'];
             $newImagePath = 'public/images/' . $item['image'];
             Storage::copy($imagePath, $newImagePath);
 
@@ -109,7 +109,7 @@ class CourseSeeder extends Seeder
             DB::table('courses')->insert([
                 'name' => $item['name'],
                 'price' => $item['price'],
-                'image' => 'images/' . $item['image'], // Menyimpan path relatif gambar
+                'image' => 'Assets/images/' . $item['image'], // Menyimpan path relatif gambar
                 'field_id' => $item['field_id'],
                 'created_at' => $item['created_at'],
                 'updated_at' => $item['updated_at'],

@@ -3,9 +3,9 @@
 @section('content')
 
     <div class="services-section">
-        <h2>List Courses</h2>
+        <h2>Course List</h2>
         <p>
-            Choose the courses that you want    
+            Choose the course that you want    
         </p>
         
         <div class="service-card">
