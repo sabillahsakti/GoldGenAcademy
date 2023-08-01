@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\certificate;
 use App\Models\course;
 use App\Models\field;
 use App\Models\order;
@@ -61,6 +62,25 @@ class DashboardController extends Controller
 
         return view('dashboard.users.index', compact('users'));
     }
+    // public function createuser()
+    // {
+       
+
+    //     return view('dashboard.users.cre');
+    // }
+
+
+    public function deleteusers($id)
+    {
+        $courses = User::find($id);
+
+        if (!$courses) {
+            return redirect()->route('dashboard.users')->with('error', 'data tidak ditemukan');
+        }
+
+        $courses->delete();
+        return redirect()->route('dashboard.users');
+    }
 
 
     //order
@@ -100,6 +120,16 @@ class DashboardController extends Controller
         $order->delete();
         return redirect()->route('dashboard.orders.index');
     }
+
+    //order
+    public function certificates()
+    {
+        $certificates = certificate::all(); // Fetch all courses from the database
+
+        return view('dashboard.certificates.index', compact('certificates'));
+    }
+
+
 
 
     public function logoutadmin ()
