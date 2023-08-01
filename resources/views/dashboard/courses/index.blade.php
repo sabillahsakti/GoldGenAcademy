@@ -24,7 +24,7 @@
           <td>{{$row->name}}</td>
           <td>{{$row->price}}</td>
           <td>
-            <img style="width: 50px" src="{{ asset('storage/images/' . $row->image) }}" alt="">
+            <img style="width: 50px" src="{{ asset($row->image) }}" alt="">
           </td>
          
           <td>{{$row->field_id}}</td>
