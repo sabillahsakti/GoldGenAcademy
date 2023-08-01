@@ -14,95 +14,109 @@
     <script src='main.js'></script>
 
     <style>
-        /* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Basic styles for the login section */
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+        /* Basic styles for the login section */
+        .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
 
-.container {
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-}
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+        }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-/* Styles for the form */
-form {
-  width: 100%;
-}
+        /* Styles for the form */
+        form {
+            width: 100%;
+        }
 
-.form-group {
-  margin-bottom: 20px;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-textarea {
-  resize: vertical;
-}
+        textarea {
+            resize: vertical;
+        }
 
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
 
-button:hover {
-  background-color: #0056b3;
-}
+        button:hover {
+            background-color: #666;
+        }
+
+        .button-register a {
+            display: inline-block;
+            padding: 10px 10px;
+            color: red;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            align-items: center;
+        }
+
+        .button-register a:hover {
+            text-decoration: underline;
+        }
 
     </style>
 
     <script>
-        window.onscroll = function () {
-            scrollFunction();
-        };
+    window.onscroll = function() {
+        scrollFunction();
+    };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollBtn").style.display = "block";
-            } else {
-                document.getElementById("scrollBtn").style.display = "none";
-            }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("scrollBtn").style.display = "block";
+        } else {
+            document.getElementById("scrollBtn").style.display = "none";
         }
+    }
 
-        function scrollToTop() {
-            document.body.scrollTop = 0; 
-            document.documentElement.scrollTop = 0; 
-        }
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     </script>
 </head>
 
@@ -133,34 +147,38 @@ button:hover {
 
 
     <section class="login">
+        
         <div class="container">
-            <h2>Registration Form</h2>
+            <h2>Sign up</h2>
             <form action="{{ route('register') }}" method="POST">
                 @csrf
-              <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-              </div>
-              <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" required> </textarea>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="number" id="phone" name="phone" required>
-              </div>
-              <button type="submit">Register</button>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" placeholder="Enter address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="number" id="phone" name="phone" placeholder="Enter phone number" required>
+                </div>
+                <button type="submit">Sign up</button>
+                <div class="button-register">
+                    <a1>Already have an account?</a1><a href="{{url("login")}}" type="button">Log in</a>
+                </div>
             </form>
         </div>
-      </section>
+    </section>
 
 </body>
 
@@ -169,7 +187,7 @@ button:hover {
         <h1>GoldGen Academy</h1>
         <div class="pSingkat">
             <p>
-                
+
 
             </p>
             <div class="smf">
