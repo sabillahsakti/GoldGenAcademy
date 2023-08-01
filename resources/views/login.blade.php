@@ -79,9 +79,13 @@
             margin: 10px;
         }
 
+        .button-register {
+          margin-left: 135px;
+        }
+
         .button-register a {
             display: inline-block;
-            padding: 10px 10px;
+            padding: 5px 10px;
             color: red;
             border: none;
             border-radius: 4px;
@@ -132,16 +136,27 @@
 
         <div class="menu-container">
             <div class="menu">
-                <a href="{{url('/')}}">Home</a>
-                <a href="about.html">About</a>
+                <a href="{{ url('/')}}">Home</a>
+                <a href="{{ url('about') }}">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
-                <a href="portofolio.html">Testimoni</a>
+                <a href="{{ url('testimoni') }}">Testimoni</a>
             </div>
 
             <div class="ltalk-container">
-                <button class="ltalk" onclick="window.location.href ='order.html';">
-                    Login
-                </button>
+            @if(session('user'))
+                    <div class="dropdown">
+                        <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
+                        <div class="dropdown-content">
+                            <a href="#">Account Information</a>
+                            <a href="{{ route('myCourses') }}">My Courses</a>
+                            <a href="{{ route('logout') }}">Logout</a>
+                        </div>
+                    </div>
+                @else
+                    <button class="ltalk" onclick="window.location.href ='{{url('register')}}';">
+                        Sign up
+                    </button>
+                @endif
             </div>
         </div>
     </div>
@@ -157,6 +172,7 @@
                     <img class="logo" src="Assets/images/logo.png" alt="">
                 </div>
                 <div class="colom kanan">
+                  <br>
                     <h2>Log in</h2>
                     <form action="{{ route('login') }}" method="POST">
                         @csrf
