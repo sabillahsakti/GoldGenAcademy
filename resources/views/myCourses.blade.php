@@ -2,13 +2,18 @@
 
 @section('content')
     <div class="course-list">
-        @foreach ($courses as $course)
+        @foreach ($userOrders as $order)
             <div class="course-card">
-                <img src="{{ asset($course->image) }}" alt="{{ $course->name }}">
+                <img src="{{ asset($order->course->image) }}" alt="{{ $order->course->name }}">
                 <div class="course-details">
-                    <h3>{{ $course->name }}</h3>
+                    <h3>{{ $order->course->name }}</h3>
                 </div>
-                <a href="#" class="btn-purchase">Certificate</a>
+                <button class="btn-purchase" 
+                        @if ($order->status == 'Pending') disabled @endif
+                        onclick="window.location.href='{{ route('certificate', $order->course->id) }}'"
+                >
+                    Certificate
+                </button>
             </div>
         @endforeach
     </div>
