@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\course;
+use App\Models\field;
 use App\Models\order;
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -32,20 +33,35 @@ class DashboardController extends Controller
 
     public function editcourses($id){
         $courses = Course::find($id);
+        $fields = Field::select('id','name')->get();
         // return $destinations;
-        return view('dashboard.courses.edit', compact('courses'));
+        return view('dashboard.courses.edit', compact('courses','fields'));
+
 
     }
+
+
 
     public function updatecourses($id,Request $request){
-        Course::where('id', $id)->update([
-            'name'=> $request->name,
-            'price' => $request->price,
-            'image' => $request->image,
-            'field_id'=>$request->field_id,
-        ]);
-        return redirect()->route('dashboard.destinasi.index');
+        $courses = Course::find($id);
+        $courses->name = $request->input('name');
+        $courses->price = $request->input('price');
+       
+        $courses->save();
+
+        $courses = Course::all();
+        return view('dashboard.courses.index', compact('courses'));
+    
     }
+
+
+    public function user()
+    {
+        $users = User::all(); // Fetch all courses from the database
+
+        return view('dashboard.users.index', compact('users'));
+    }
+
 
     //order
     public function orders()
@@ -83,6 +99,13 @@ class DashboardController extends Controller
 
         $order->delete();
         return redirect()->route('dashboard.orders.index');
+    }
+
+
+    public function logoutadmin ()
+    {
+        Auth::logout();
+        return redirect('login');
     }
 
 
