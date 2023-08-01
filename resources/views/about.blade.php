@@ -5,14 +5,72 @@
         <h2 class="header-h2">About Us</h2>
         <div class="aContainer-Header">
             <p class="header-p">
-                Golden Gen Academy holds strong values to define the company’s vision and mission statement. In hope
+                GoldGen Academy holds strong values to define the company’s vision and mission statement. In hope
                 of
-                developing a sustainable company, values also become an essential fundamental for all Golden Gens
+                developing a sustainable company, values also become an essential fundamental for all Golden Generasion
                 involved, including the founders and academics.
             </p>
         </div>
 
         <div class="aContainer-vm">
+            <style>
+                .aContainer-vm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px; /* Sesuaikan lebar maksimum container sesuai kebutuhan */
+  margin: 0 auto; /* Untuk membuat container berada di tengah halaman */
+}
+
+.table-vm {
+  width: 100%;
+}
+
+.title-vm {
+  background-color: #f0f0f0; /* Warna latar belakang untuk judul */
+  font-weight: bold;
+}
+
+.title-vm td {
+  padding: 10px;
+}
+
+.title-vm td:first-child {
+  border-right: 1px solid #ccc; /* Garis vertikal pemisah antara Visi dan Misi */
+}
+
+.title-vm td:last-child {
+  border-left: 1px solid #ccc; /* Garis vertikal pemisah antara Visi dan Misi */
+}
+
+.title-vm td:first-child,
+.title-vm td:last-child {
+  text-align: center;
+}
+
+/* Untuk Visi */
+.visi-container {
+  width: 48%; /* Lebar container Visi, sesuaikan sesuai kebutuhan */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Untuk Misi */
+.misi-container {
+  width: 48%; /* Lebar container Misi, sesuaikan sesuai kebutuhan */
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.p-bold {
+  font-weight: bold;
+}
+
+.p-gray {
+  color: #777;
+}
+
+            </style>
             <table class="table-vm">
                 <tbody>
                     <tr class="title-vm">
@@ -21,45 +79,15 @@
                     </tr>
                     <tr>
                         <td>
-                            <p class="p-bold">Untuk Saling Menginspirasi dan Menyemangati</p>
-                            <p class="p-gray">Ketika talenta potensial bersatu membentuk cahaya pembaruan dalam
-                                bidang digital,</p>
-                            <p class="p-gray">hasil dan kolaborasi mereka harus bisa menghidupkan serta
-                                menginspirasi banyak orang.
+                            <p class="p-bold">To Inspire and Encourage Each Other</p>
+                            <p class="p-gray">To be a leading and innovative educational learning platform that presents the world of knowledge and education in an inspiring form and empowers individuals from all walks of life to achieve a brighter future.
                             </p>
                         </td>
                         <td>
-                            <p class="p-bold">Untuk Saling Menemukan</p>
-                            <p class="p-gray">Golden Gen Academy mengajak untuk terus mencari esensi,bukan hanya
-                                untuk meraih forma
-                            </p>
-                            <p class="p-gray">atau output yang terlihat baik. Forma dan substansi harus berjalan
-                                beriringan.</p>
+                            <p class="p-bold">To Discover, Process, Connect</p>
+                            <p class="p-gray">GoldGen Academy invites you to continue to seek the essence, not just to achieve form or output that looks good. Form and substance must go hand in hand,And GoldGen Akademi encourages active participation in the learning process by providing forums and interactive discussion spaces.</p>
                         </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <p class="p-bold">Untuk Saling Berproses</p>
-                            <p class="p-gray">Golden Gen Academy mendorong untuk tidak hanya mempelajari wawasan dan
-                                teori tapi juga
-                                dapat</p>
-                            <p class="p-gray">meneladani proses untuk menjadi landasan dalam membuat.</p>
-                            <p class="p-gray">inovasi yang dapat membangun bangsa</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <p class="p-bold">Untuk Saling Terkoneks</p>
-                            <p class="p-gray">Ilmu dan pelatihan yang menjadi bagian dari ekosistem Binar Academy
-                                dirancang untuk</p>
-                            <p class="p-gray">menghubungkan talenta dengan pakar atau talenta dengan talenta. Dengan
-                                demikian,</p>
-                            <p class="p-gray">terciptalah potensi dan kesempatan. Hubungan ini merupakan sebuah
-                                simbiosis yang</p>
-                            <p class="p-gray">dilandaskan pada daya saing di era digital.</p>
-                        </td>
+                
                     </tr>
                 </tbody>
             </table>
@@ -74,53 +102,106 @@
                 </p>
             </div>
             <div class="Container-atable">
-                <table class="atable">
-                    <tr class="tr1-atable">
-                        <td><img src="Assets/images/cewe.jpg" alt="" class="cewe-img"></td>
-                        <td class="td-a1">
-                            <h3 class="a1-h2">Siti Maemunah</h3>
-                            <p class="team-p">
-                                After completing her extraordinary journey at GOJEK, Siti embarked on a new adventure to
-                                spread the spirit of learning and thinking ahead to support Indonesia development. Following
-                                her dream, Siti Maemunah built the GoldenGen Academy, as a means to directly contribute to
-                                the development of a healthy digital and technology ecosystem through the talents of the
-                                nation that Binar Academy gave birth to.
-                            </p>
-                        </td>
-                    </tr>
-                    <tr class="tr1-atable">
-                        <td class="td-a1">
-                            <h3 class="a1-h2">Siti Rohiya</h3>
-                            <p class="team-p">
-                                Siti Rohiya returned to Indonesia from the United States and had to adapt not only to the
-                                culture but also to her job where she made the transition from working in politics to
-                                technology. Started as a Business Analyst at Gojek, she then managed the Marketing team for
-                                beauty services on demand (GO-GLAM). During the transition process, Siti became aware of the
-                                inequality of opportunity and education across Indonesia and hopes that her involvement at
-                                GoldenGen Academy is a stepping stone to closing that gap and making world-class education
-                                more
-                                accessible to everyone, regardless of socioeconomic background or geographic location.
-                            </p>
-                        <td><img src="Assets/images/cewe2.jpg" alt="" class="cewe-img2"></td>
-                        </td>
-                    </tr>
-                    <tr class="tr1-atable">
-                        <td><img src="Assets/images/cewe3.jpg" alt="" class="cewe-img"></td>
-                        <td class="td-a1">
-                            <h3 class="a1-h2">Siti jumuah</h3>
-                            <p class="team-p">
-                                Spent 9 years in the creative industry that is closely related to developing human potential
-                                as well as a sustainable environment. Actively building community and education in rural
-                                areas, from Kalimantan to eastern Indonesia. Then actively involved in GOJEK in developing
-                                the team. After going through various experiences from various industries, Seto believes
-                                that the human potential in Indonesia is huge but inequality in access to education and
-                                infrastructure is a problem. Therefore, Seto feels that the vision and mission that GoldenGen Academy has are in line with Seto's values ​​and beliefs to provide access to quality and
-                                actual education to every corner of Indonesia.
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+    <table class="atable">
+        <tr class="tr1-atable">
+            <td>
+                <img src="Assets/images/sabil.jpeg" alt="" class="cewe-img">
+            </td>
+            <td class="td-a1">
+                <h3 class="a1-h2">Sabilah Sakti</h3>
+                <p class="team-p">
+                Saya adalah seorang profesional di bidang Teknologi Informasi dengan gelar sarjana dan pengalaman kerja selama beberapa tahun. Saya memiliki keahlian dan semangat belajar yang tinggi di bidang ini. Selama studi saya di Institut Teknologi Telkom Surabaya, saya telah menyelesaikan mata kuliah yang meliputi Internet of Things, Web Programming, Mobile Programming, Database, dan Data Analysis.
 
-        </div>
+Pengalaman dan pengetahuan yang saya miliki telah membantu saya berkontribusi secara positif dalam industri Teknologi Informasi. Saya selalu berusaha untuk terus mengembangkan diri dengan mengikuti perkembangan terbaru di bidang ini. Saya percaya bahwa teknologi adalah kunci untuk menciptakan perubahan positif dalam masyarakat dan saya berkomitmen untuk berperan aktif dalam mencapai tujuan tersebut.
+                </p>
+            </td>
+        </tr>
+        <!-- Add the second team member -->
+        <tr class="tr1-atable">
+        <style>
+                    .cewe-img,
+.cewe-img2 {
+  max-width: 100%;
+  height: auto;
+}
+
+                </style>    
+        <td class="td-a1">
+                <h3 class="a1-h2">Boby Septiananda</h3>
+                <p class="team-p">
+                Saya adalah seorang mahasiswa semester 6 jurusan Teknologi Informasi di Institut Teknologi Telkom Surabaya yang memiliki minat dan 
+                aspirasi untuk mengembangkan keterampilan dalam bidang Teknologi Informasi (IT) khususnya di bidang Front End Engineer. Saya mengambil beberapa mata kuliah yang sesuai dengan minat saya seperti Web Programming, Mobile Programming, Data Analysis, dan Internet of Things.
+                </p>
+            </td>
+            <td>
+                <img src="Assets/images/boby.jpeg" alt="" class="cewe-img2">
+            </td>
+        </tr>
+        <!-- Add the third team member -->
+        <tr class="tr1-atable">
+        <style>
+                    .cewe-img,
+.cewe-img2 {
+  max-width: 100%;
+  height: auto;
+}
+
+                </style>    
+        <td>
+                <img src="Assets/images/andika.jpeg" alt="" class="cewe-img">
+            </td>
+            <td class="td-a1">
+                <h3 class="a1-h2">Andika Putra</h3>
+                <p class="team-p">
+                Saya adalah seorang mahasiswa semester 6 jurusan Teknologi Informasi di Institut Teknologi Telkom Surabaya yang memiliki minat dan aspirasi untuk mengembangkan keterampilan dalam bidang Teknologi Informasi (IT) khususnya di bidang Front End Engineer. Saya mengambil beberapa mata kuliah yang sesuai dengan minat saya seperti Web Programming, Mobile Programming dan Internet of Things.
+Saya Juga memiliki pengalaman yang signifikan sebagai YouTuber dengan saluran yang sukses dan pertumbuhan yang konsisten. Mahir dalam pengeditan video, pemasaran digital, dan analisis data YouTube.
+                </p>
+            </td>
+        </tr>
+       <!-- Add the fourth team member -->
+        <tr class="tr1-atable">
+        <style>
+                    .cewe-img,
+.cewe-img2 {
+  max-width: 100%;
+  height: auto;
+}
+
+                </style>
+            <td class="td-a1">
+                <h3 class="a1-h2">Marzuq Muadz</h3>
+                <p class="team-p">
+                Saya adalah seorang mahasiswa semester 6 jurusan Teknologi Informasi di Institut Teknologi Telkom Surabaya. Saya memiliki keterampilan dan keinginan belajar di bidang Teknologi Informasi. Mata kuliah yang sudah saya pelajari meliputi Internet of Things, Web Programming, Mobile Programming, Database, dan Data Analysis.
+                 Saya ingin terus mengembangkan diri dan berkontribusi dalam industri Teknologi Informasi.
+                </p>
+            </td>
+            <td>
+                <img src="Assets/images/marzuq2.jpeg" alt="" class="cewe-img2">
+            </td>
+        </tr>
+          <!-- Add the fifth team member -->
+          <tr class="tr1-atable">
+          <style>
+                    .cewe-img,
+.cewe-img2 {
+  max-width: 100%;
+  height: auto;
+}
+
+                </style>
+            <td>
+                <img src="Assets/images/radif.jpeg" alt="" class="cewe-img">
+            </td>
+            <td class="td-a1">
+                <h3 class="a1-h2">Muhammad Radif Aftamaulana</h3>
+                <p class="team-p">
+                Saya merupakan seorang mahasiswa semester 4 jurusan Teknologi Informasi di Institut Teknologi Telkom Surabaya. 
+                Minat dan aspirasi saya terletak pada pengembangan keterampilan di bidang Teknologi Informasi (IT),
+                 khususnya sebagai seorang Front End Engineer. Beberapa mata kuliah yang telah saya ambil dan sesuai dengan minat saya antara lain Web Programming, Mobile Programming, dan Internet of Things.
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
+
     @endsection
