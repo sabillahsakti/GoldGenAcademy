@@ -5,14 +5,30 @@ use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InfoAkunController;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\DashboardController;
 
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/layout', function () {
     return view('layout.master');
 });
 
 
+Route::get('/layout', function () {
+    return view('dashboard.layouts.master');
+});
+Route::get('/layout', function () {
+    return view('dashboard.layouts.baster');
+});
+Route::prefix('dashboard')->group(function (){
+    Route::get('/courses', [DashboardController::class, 'courses'])->name('dashboard.courses');
+    Route::delete('/courses/{id}', [DashboardController::class, 'deletecourses'])->name('delete.courses');
+
+});
+
+
+
 Route::get('/', function () {
     return view('index');
 });
@@ -20,6 +36,7 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('index');
 });
+
 
 Route::get('/about', function () {
     return view('about');
