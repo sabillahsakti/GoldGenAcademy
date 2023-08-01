@@ -104,7 +104,7 @@
                     <div class="dropdown">
                         <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
                         <div class="dropdown-content">
-                            <a href="#">Info akun</a>
+                            <a href="{{ url('account') }}">Info akun</a>
                             <a href="#">Daftar kelas</a>
                             <a href="{{ route('logout') }}">Logout</a>
                         </div>
@@ -118,7 +118,9 @@
 
         </div>
     </div>
+@extends('layout.master')
 
+@section('content')
     <section class="tengah">
 
         <div class="dwu">
@@ -205,47 +207,4 @@
         </div>
     </section>
 
-</body>
-
-<footer style="display: flex; align-items: center; justify-content: space-between; padding: 10px 50px;">
-    <div class="left-content">
-        <h1>GoldGen Academy</h1>
-        <div class="pSingkat">
-            <p>
-                
-
-            </p>
-            <div class="smf">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-youtube"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-twitter"></i>
-            </div>
-        </div>
-    </div>
-
-    <div class="right-content">
-        <div class="contact">
-
-            <div class="iconContact">
-                <h2>Contact</h2>
-                <div class="iconItem">
-                    <i class="fas fa-phone"></i>
-                    <span>(406) 555-0120</span>
-                </div>
-                <div class="iconItem">
-                    <i class="fas fa-envelope"></i>
-                    <span>GoldGen.Academy@gmail.com</span>
-                </div>
-                <div class="iconItem">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Jl. Karang Rejo VII No.9 Wonokromo</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-</html>
+@endsection

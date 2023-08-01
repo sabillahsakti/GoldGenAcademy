@@ -3,11 +3,41 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\InfoAkunController;
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\DashboardController;
+
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
+Route::get('/layout', function () {
+    return view('layout.master');
+});
+
+
+Route::get('/layout', function () {
+    return view('dashboard.layouts.master');
+});
+Route::get('/layout', function () {
+    return view('dashboard.layouts.baster');
+});
+Route::prefix('dashboard')->group(function (){
+    Route::get('/courses', [DashboardController::class, 'courses'])->name('dashboard.courses');
+    Route::delete('/courses/{id}', [DashboardController::class, 'deletecourses'])->name('delete.courses');
+
+});
+
+
 
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/', function () {
+    return view('index');
+});
+
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -28,11 +58,17 @@ Route::get('/recommendation', function () {
     return view('recommendation');
 });
 
+Route::get('/myCourses', function () {
+    return view('myCourses');
+});
+
 Route::get('/login', [AuthController::class, 'viewlogin']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/register', [AuthController::class, 'viewregister']);
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
 Route::match(['get', 'post'], '/courses/{id}/purchase', [CourseController::class, 'purchase'])->name('courses.purchase');
@@ -46,3 +82,9 @@ Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('inde
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/submit-recommendation', [RecommendationController::class, 'submit'])->name('submit.recommendation');
+Route::get('/account', [InfoAkunController::class, 'showAccountInfo']);
+
+Route::get('/myCourses', [AuthController::class, 'myCourses'])->name('myCourses');
+
+Route::get('/certificate/{courseId}', [CertificateController::class, 'showCertificate'])->middleware('auth')->name('certificate');
+Route::get('/download-certificate/{courseId}', [CertificateController::class, 'downloadCertificate'])->middleware('auth')->name('downloadCertificate');

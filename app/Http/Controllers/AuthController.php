@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\order;
 
 class AuthController extends Controller
 {
@@ -45,7 +46,11 @@ class AuthController extends Controller
             $user = Auth::user();
             $request->session()->put('user', $user);
 
-            return view('index', ['user' => $user]);
+            if ($user->role == 'admin') {
+                return view('dashboard.index', ['user' => $user]);
+            } else {
+                return view('index', ['user' => $user]);
+            }
         }
         else{
             return view('login');
@@ -60,4 +65,13 @@ class AuthController extends Controller
 
         return redirect('/');
     }
+
+    public function myCourses()
+{
+    // Get the authenticated user's orders along with their related courses
+    $userOrders = Order::where('user_id', auth()->id())->with('course')->get();
+
+    return view('myCourses', ['userOrders' => $userOrders]);
+}
+
 }

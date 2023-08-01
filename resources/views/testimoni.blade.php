@@ -30,6 +30,53 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            // Hide the dropdown when clicking outside of it
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('.dropdown').length) {
+                    $('.dropdown-content').hide();
+                }
+            });
+
+            // Show/hide the dropdown when clicking on the username button
+            $('.dropdown-btn').on('click', function() {
+                $('.dropdown-content').toggle();
+            });
+        });
+    </script>
 
 </head>
 
@@ -44,11 +91,29 @@
 
         <div class="menu-container">
             <div class="menu">
-                <a href="/">Home</a>
+                <a href="{{ url('/')}}">Home</a>
                 <a href="{{ url('about') }}">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
                 <a href="{{ url('testimoni') }}">Testimoni</a>
             </div>
+
+            <div class="ltalk-container">
+                @if(session('user'))
+                    <div class="dropdown">
+                        <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
+                        <div class="dropdown-content">
+                            <a href="#">Account Information</a>
+                            <a href="{{ route('myCourses') }}">My Courses</a>
+                            <a href="{{ route('logout') }}">Logout</a>
+                        </div>
+                    </div>
+                @else
+                    <button class="ltalk" onclick="window.location.href ='{{url('login')}}';">
+                        Login
+                    </button>
+                @endif
+            </div>
+
         </div>
     </div>
     <div class="tContainer">

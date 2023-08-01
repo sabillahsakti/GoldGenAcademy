@@ -938,6 +938,11 @@
     border-radius: 10px;
 }
 
+.logo {
+    height: 350px;
+    width: 350px;
+}
+
 /* Styles for Container-atable */
 .Container-atable {
     display: flex;
@@ -953,6 +958,7 @@
 /* Styles for tr1-atable */
 .tr1-atable {
     text-align: left;
+    width: 400px;
 }
 
 /* Styles for a1-h2 */
@@ -1163,4 +1169,203 @@
     .bawahSendiri {
         font-size: 14px;
     }
+}
+
+/* Common styles for both desktop and mobile devices */
+
+.bagian-kiri {
+    display: flex;
+    width: 20%;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#userimg {
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.IaContainer {
+    padding-top: 50px;
+}
+
+.h1-IaContainer {
+    margin-top: 100px;
+}
+
+.isi-ia {
+    display: flex;
+    justify-content: center;
+}
+
+.bagian-kanan {
+    width: 60%;
+    padding-left: 30px;
+}
+
+.isian {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.tContainer-isian {
+    padding: 50px;
+}
+
+.isian .kotakan {
+    flex-basis: calc(33.33% - 20px);
+    max-width: 300px;
+    height: 80px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+}
+
+.isian .kotakan img {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 60px;
+}
+
+.isian .kotakan h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.isian .kotakan .atasSendiri {
+    font-size: 16px;
+    color: black;
+}
+
+.dalemanan {
+    text-align: left;
+    width: 400px;
+}
+
+.atas-header {
+}
+
+.atas-p {
+    color: gray;
+}
+
+.p-info {
+    font-size: 30px;
+    height: 30px;
+}
+
+.p2-info {
+}
+
+
+/* Media Query for Desktop and Mobile Devices */
+@media screen and (max-width: 767px) {
+    /* Adjust the styles here for mobile devices */
+    .bagian-kiri, .bagian-kanan {
+        width: 100%;
+        padding: 0;
+    }
+
+    #userimg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .isian .kotakan {
+        flex-basis: calc(50% - 20px);
+        max-width: 200px;
+        height: 60px;
+    }
+
+    .isian .kotakan img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .isian .kotakan h3 {
+        font-size: 16px;
+    }
+
+    .isian .kotakan .atasSendiri {
+        font-size: 14px;
+    }
+
+    .dalemanan {
+        width: 100%;
+    }
+
+    .p-info {
+        font-size: 24px;
+        height: auto;
+    }
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.course-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-purchase {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    background-color: #0041E8; /* Green */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-purchase:hover {
+    background-color: #023cce;
+}
+
+.btn-purchase:disabled {
+    background-color: gray;
+    cursor: not-allowed;
 }
