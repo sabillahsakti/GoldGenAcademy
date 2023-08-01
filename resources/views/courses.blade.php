@@ -2,6 +2,11 @@
 
 @section('content')
 
+    <div class="services-section">
+        <h2>Course List</h2>
+        <p>
+            Choose the course that you want    
+        </p>
 <table class="table">
   <thead>
     <tr>
