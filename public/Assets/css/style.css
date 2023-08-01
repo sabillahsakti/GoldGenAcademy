@@ -927,7 +927,7 @@
 /* Styles for cewe-img */
 .cewe-img {
     height: 550px;
-    width: 40/0px;
+    width: 400px;
     border-radius: 10px;
 }
 
@@ -958,6 +958,7 @@
 /* Styles for tr1-atable */
 .tr1-atable {
     text-align: left;
+    width: 400px;
 }
 
 /* Styles for a1-h2 */
