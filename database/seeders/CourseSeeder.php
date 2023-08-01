@@ -20,7 +20,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Front End Web',
                 'price' => 5000000,
-                'image' => 'cewe.jpg',
+                'image' => 'frontendweb.png',
                 'field_id' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -28,7 +28,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Back End Web',
                 'price' => 5000000,
-                'image' => 'cewe.jpg',
+                'image' => 'backendweb.png',
                 'field_id' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -36,7 +36,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Full Stack Web Developer',
                 'price' => 5000000,
-                'image' => 'cewe.jpg',
+                'image' => 'fullstack.png',
                 'field_id' => 6,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -44,7 +44,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Front End Developer',
                 'price' => 7000000,
-                'image' => 'cewe.jpg',
+                'image' => 'frontend.png',
                 'field_id' => 2,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -52,7 +52,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Back End Developer',
                 'price' => 10000000,
-                'image' => 'cewe.jpg',
+                'image' => 'backend.png',
                 'field_id' => 2,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -60,7 +60,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Laravel',
                 'price' => 3000000,
-                'image' => 'cewe.jpg',
+                'image' => 'laravel.png',
                 'field_id' => 4,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -68,7 +68,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Code Igniter',
                 'price' => 3000000,
-                'image' => 'cewe.jpg',
+                'image' => 'ci.png',
                 'field_id' => 4,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -76,7 +76,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Data Analyst',
                 'price' => 5500000,
-                'image' => 'cewe.jpg',
+                'image' => 'dataanalyst.png',
                 'field_id' => 7,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -84,7 +84,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Data Engineer',
                 'price' => 5500000,
-                'image' => 'cewe.jpg',
+                'image' => 'dataengineer.png',
                 'field_id' => 7,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -92,7 +92,7 @@ class CourseSeeder extends Seeder
             [
                 'name' => 'Database Management',
                 'price' => 5500000,
-                'image' => 'cewe.jpg',
+                'image' => 'databasemanagement.png',
                 'field_id' => 7,
                 'created_at' => now(),
                 'updated_at' => now(),
