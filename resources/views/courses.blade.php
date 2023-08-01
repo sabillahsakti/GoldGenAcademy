@@ -14,7 +14,7 @@
                 <img src="{{ asset($course->image) }}" alt="Course Image">
                 <h3>{{ $course->name }}</h3>
                 <h5>{{ $course->price }}</h5>
-                <button onclick="window.location.href = '{{ route('courses.purchase', $course->id) }}'">Purchases</button>
+                <button onclick="window.location.href = '{{ route('courses.purchase', $course->id) }}'">Purchase</button>
             </div>
             @endforeach
         </div>

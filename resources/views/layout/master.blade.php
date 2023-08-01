@@ -104,8 +104,8 @@
                     <div class="dropdown">
                         <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
                         <div class="dropdown-content">
-                            <a href="#">Info akun</a>
-                            <a href="#">Daftar kelas</a>
+                            <a href="#">Account Information</a>
+                            <a href="{{ route('myCourses') }}">My Courses</a>
                             <a href="{{ route('logout') }}">Logout</a>
                         </div>
                     </div>
