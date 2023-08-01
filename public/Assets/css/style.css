@@ -1171,13 +1171,16 @@
     }
 }
 
-.bagian-kiri{
+/* Common styles for both desktop and mobile devices */
+
+.bagian-kiri {
     display: flex;
     width: 20%;
     height: 100px;
     border-radius: 10px;
 }
-#userimg{
+
+#userimg {
     padding: 10px;
     width: 80px;
     height: 80px;
@@ -1185,30 +1188,35 @@
     justify-content: center;
     align-items: center;
 }
-.IaContainer{
+
+.IaContainer {
     padding-top: 50px;
 }
-.h1-IaContainer{
+
+.h1-IaContainer {
     margin-top: 100px;
 }
-.isi-ia{
+
+.isi-ia {
     display: flex;
     justify-content: center;
 }
-.bagian-kanan{
+
+.bagian-kanan {
     width: 60%;
     padding-left: 30px;
 }
+
 .isian {
     display: flex;
     flex-wrap: wrap;
     max-width: 1000px;
 }
+
 .tContainer-isian {
     padding: 50px;
 }
 
-/* Styles for isi .kotak */
 .isian .kotakan {
     flex-basis: calc(33.33% - 20px);
     max-width: 300px;
@@ -1221,7 +1229,6 @@
     display: flex;
 }
 
-/* Styles for isi .kotak img */
 .isian .kotakan img {
     width: 80px;
     height: 80px;
@@ -1230,34 +1237,79 @@
     border-radius: 60px;
 }
 
-/* Styles for isi .kotak h3 */
 .isian .kotakan h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-/* Styles for isi .kotak .atasSendiri */
 .isian .kotakan .atasSendiri {
     font-size: 16px;
     color: black;
 }
 
-/* Styles for daleman */
 .dalemanan {
     text-align: left;
     width: 400px;
 }
-.atas-header{
+
+.atas-header {
 }
-.atas-p{
+
+.atas-p {
     color: gray;
 }
-.p-info{
+
+.p-info {
     font-size: 30px;
     height: 30px;
 }
-.p2-info{
+
+.p2-info {
 }
+
+
+/* Media Query for Desktop and Mobile Devices */
+@media screen and (max-width: 767px) {
+    /* Adjust the styles here for mobile devices */
+    .bagian-kiri, .bagian-kanan {
+        width: 100%;
+        padding: 0;
+    }
+
+    #userimg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .isian .kotakan {
+        flex-basis: calc(50% - 20px);
+        max-width: 200px;
+        height: 60px;
+    }
+
+    .isian .kotakan img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .isian .kotakan h3 {
+        font-size: 16px;
+    }
+
+    .isian .kotakan .atasSendiri {
+        font-size: 14px;
+    }
+
+    .dalemanan {
+        width: 100%;
+    }
+
+    .p-info {
+        font-size: 24px;
+        height: auto;
+    }
+}
+
 .course-list {
     display: flex;
     flex-wrap: wrap;
