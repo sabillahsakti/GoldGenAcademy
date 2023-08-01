@@ -126,66 +126,54 @@
         <div class="tContainer-isi">
             <div class="isi">
                 <div class="kotak">
-                    <img src="Assets/images/cewehead.jpg" alt="Landing Page">
+                    <img src="Assets/images/marzuq.jpeg" alt="Landing Page">
                     <div class="daleman">
-                        <p class="atasSendiri">Lorem ipsum dolor sit amet. Ut nisi ducimus sit quas soluta 33 deleniti blanditiis est beatae
-                            pariatur. Id illum minima qui vitae enim qui aliquid aliquam et debitis quia quo internos
-                            tenetur.</p>
-                        <p class="bawahSendiri">Grace Garey, Student</p>
+                        <p class="atasSendiri">"Tidak ada batasan bagi pengetahuan yang dapat Anda peroleh. Teruslah belajar dan Anda akan terus tumbuh."</p>
+                        <p class="bawahSendiri">Marzuq Muads, Student</p>
                     </div>
                 </div>
 
                 <div class="kotak">
-                    <img src="Assets/images/cewehead.jpg" alt="Landing Page">
+                    <img src="Assets/images/ilham.jpeg" alt="Landing Page">
                     <div class="daleman">
-                        <p class="atasSendiri">"Lorem ipsum dolor sit amet. Ut nisi ducimus sit quas soluta 33 deleniti blanditiis est beatae
-                            pariatur. Id illum minima qui vitae enim qui aliquid aliquam et debitis quia quo internos
-                            tenetur."</p>
-                        <p class="bawahSendiri">Ophelie Lechat, Student</p>
+                        <p class="atasSendiri">"Pendidikan adalah kunci untuk membuka pintu kesuksesan. Selangkah demi selangkah, Anda mendekati kesempurnaan."</p>
+                        <p class="bawahSendiri">Ilham Riswanda, Student</p>
                     </div>
                 </div>
             </div>
 
             <div class="isi">
                 <div class="kotak">
-                    <img src="Assets/images/cewehead.jpg" alt="Landing Page">
+                    <img src="Assets/images/ferdy.jpeg" alt="Landing Page">
                     <div class="daleman">
-                        <p class="atasSendiri">"Lorem ipsum dolor sit amet. Ut nisi ducimus sit quas soluta 33 deleniti blanditiis est beatae
-                            pariatur. Id illum minima qui vitae enim qui aliquid aliquam et debitis quia quo internos
-                            tenetur."</p>
-                        <p class="bawahSendiri">Nir Eyal, Student</p>
+                        <p class="atasSendiri">"Setiap harapan masa depan terletak di dalam buku-buku yang Anda pelajari hari ini."</p>
+                        <p class="bawahSendiri">Ferdiansyah, Student</p>
                     </div>
                 </div>
 
                 <div class="kotak">
-                    <img src="Assets/images/cewehead.jpg" alt="Landing Page">
+                    <img src="Assets/images/luna.jpeg" alt="Landing Page">
                     <div class="daleman">
-                        <p class="atasSendiri">"Lorem ipsum dolor sit amet. Ut nisi ducimus sit quas soluta 33 deleniti blanditiis est beatae
-                            pariatur. Id illum minima qui vitae enim qui aliquid aliquam et debitis quia quo internos
-                            tenetur."</p>
-                        <p class="bawahSendiri">Paul Jarvis, Student</p>
+                        <p class="atasSendiri">"Jangan takut gagal, karena kegagalan adalah kesempatan untuk memulai kembali dengan lebih bijaksana.""</p>
+                        <p class="bawahSendiri">Nadira Luna, Student</p>
                     </div>
                 </div>
             </div>
 
             <div class="isi">
                 <div class="kotak">
-                    <img src="Assets/images/cewehead.jpg" alt="Landing Page">
+                    <img src="Assets/images/dapid.jpeg" alt="Landing Page">
                     <div class="daleman">
-                        <p class="atasSendiri">"Lorem ipsum dolor sit amet. Ut nisi ducimus sit quas soluta 33 deleniti blanditiis est beatae
-                            pariatur. Id illum minima qui vitae enim qui aliquid aliquam et debitis quia quo internos
-                            tenetur."</p>
-                        <p class="bawahSendiri">Lawrence Watkins, Student</p>
+                        <p class="atasSendiri">"Ketika Anda merasa frustasi, ingatlah bahwa bahasa baru, keterampilan baru, dan pengetahuan baru sedang menunggu untuk ditemukan."</p>
+                        <p class="bawahSendiri">David Albustommy, Student</p>
                     </div>
                 </div>
 
                 <div class="kotak">
-                    <img src="Assets/images/cewehead.jpg" alt="Landing Page">
+                    <img src="Assets/images/salman.jpeg" alt="Landing Page">
                     <div class="daleman">
-                        <p class="atasSendiri">"Lorem ipsum dolor sit amet. Ut nisi ducimus sit quas soluta 33 deleniti blanditiis est beatae
-                            pariatur. Id illum minima qui vitae enim qui aliquid aliquam et debitis quia quo internos
-                            tenetur."</p>
-                        <p class="bawahSendiri">Alex Minchin, Student</p>
+                        <p class="atasSendiri">"Kesempatan tidak datang, ia dibuat. Peluang untuk belajar ada di sekitar kita, manfaatkan dengan baik."</p>
+                        <p class="bawahSendiri">Salman, Student</p>
                     </div>
                 </div>
             </div>
