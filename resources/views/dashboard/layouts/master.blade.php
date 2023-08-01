@@ -68,7 +68,7 @@
           <li class="nav-header">Dashboard</li>
 
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('dashboard.users')}}" class="nav-link">
               <i class="nav-icon fas fa-ellipsis-h"></i>
               <p>User</p>
             </a>

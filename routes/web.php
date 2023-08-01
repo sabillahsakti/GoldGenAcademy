@@ -27,6 +27,7 @@ Route::prefix('dashboard')->group(function (){
     Route::get('/courses/{id}', [DashboardController::class, 'editcourses'])->name('edit.courses');
     Route::put('/courses/{id}', [DashboardController::class, 'updatecourses'])->name('update.courses');
     Route::get('/orders', [DashboardController::class, 'orders'])->name('dashboard.orders');
+    Route::get('/users', [DashboardController::class, 'users'])->name('dashboard.users');
 });
 
 

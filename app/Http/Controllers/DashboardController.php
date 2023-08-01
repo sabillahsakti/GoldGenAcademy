@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use App\Models\order;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 
@@ -52,6 +53,13 @@ class DashboardController extends Controller
         $orders = Order::all(); // Fetch all courses from the database
 
         return view('dashboard.orders.index', compact('orders'));
+    }
+
+    public function users()
+    {
+        $users = User::all(); // Fetch all courses from the database
+
+        return view('dashboard.users.index', compact('users'));
     }
 
 }
