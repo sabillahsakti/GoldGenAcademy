@@ -129,7 +129,7 @@
                     <img src="Assets/images/marzuq.jpeg" alt="Landing Page">
                     <div class="daleman">
                         <p class="atasSendiri">"Tidak ada batasan bagi pengetahuan yang dapat Anda peroleh. Teruslah belajar dan Anda akan terus tumbuh."</p>
-                        <p class="bawahSendiri">Marzuq Muads, Student</p>
+                        <p class="bawahSendiri">Marzuq Muadz, Student</p>
                     </div>
                 </div>
 
