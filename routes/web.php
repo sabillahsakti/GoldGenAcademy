@@ -93,3 +93,6 @@ Route::post('/change-password', [AuthController::class, 'changePassword'])->name
 
 Route::get('/certificate/{courseId}', [CertificateController::class, 'showCertificate'])->middleware('auth')->name('certificate');
 Route::get('/download-certificate/{courseId}', [CertificateController::class, 'downloadCertificate'])->middleware('auth')->name('downloadCertificate');
+
+Route::get('/dashboard/orders/{id}/edit', [DashboardController::class, 'editOrder'])->name('edit.orders');
+Route::put('/dashboard/orders/{id}', [DashboardController::class, 'updateOrder'])->name('update.orders');
