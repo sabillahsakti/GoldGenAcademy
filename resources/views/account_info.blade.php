@@ -118,18 +118,63 @@
         </div>
     </div>
 
-    <h1>Informasi Akun</h1>
-    <div class="bagian-atas">
-        <i class="fas fa-user-circle fa-4x" id="userimg"></i>
-        <div class="ket-bagianAtas">
-            <h6>{{ $user->name }}</h6>
+    <div class="IaContainer">
+        <div class="isi-ia">
+            <div class="bagian-kiri">
+                <div class="ket-bagianAtas">
+                    <i class="fas fa-user-circle fa-4x" id="userimg"></i>
+                    <p class="h4-bagiankiri">{{ $user->name }}</p>
+                    <p class="h4-bagiankiri" style="color: gray">{{ $user->email }}</p>
+                    
+                </div>
+            </div>
+            <div class="bagian-kanan">
+                <p class="p-info">Informasi Akun</p>
+                <p  style="color: gray" class="p2-info">Manage your personal information, including phonenumber and email address where you can be contatcted</p>
+                <div class="isian">
+                    <div class="kotakan">
+                        <div class="dalemanan">
+                                <p class="atas-header">Name</p>
+                            <p class="atas-p">{{ $user->name }}</p>
+                        </div>
+                    </div>
+
+                    <div class="kotakan">
+                        <div class="dalemanan">
+                            <div class="dalemanan">
+                                <p class="atas-header">Address</p>
+                                <p class="atas-p">{{ $user->address }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="isian">
+                    <div class="kotakan">
+                        <div class="dalemanan">
+                            <div class="dalemanan">
+                                <p class="atas-header">Email</p>
+                                <p class="atas-p">{{ $user->email }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kotakan">
+                        <div class="dalemanan">
+                            <div class="dalemanan">
+                                <div>
+                                    <p class="atas-header">Phone</p>
+                                </div>
+                                <p class="atas-p">{{ $user->phone }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <p>Nama: {{ $user->name }}</p>
-    <p>Email: {{ $user->email }}</p>
-    <p>Address: {{ $user->address }}</p>
-    <p>Phone: {{ $user->phone }}</p>
-    <!-- Tambahkan info akun lainnya yang sesuai -->
+    </div>
+    </div>
 </body>
 
 </html>

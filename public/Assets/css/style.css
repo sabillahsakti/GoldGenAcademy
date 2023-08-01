@@ -1171,10 +1171,10 @@
     }
 }
 
-.bagian-atas{
+.bagian-kiri{
     display: flex;
-    border: solid 1px #e6e6e6;
-    border-style: outset;
+    width: 20%;
+    height: 100px;
     border-radius: 10px;
 }
 #userimg{
@@ -1184,6 +1184,79 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.IaContainer{
+    padding-top: 50px;
+}
+.h1-IaContainer{
+    margin-top: 100px;
+}
+.isi-ia{
+    display: flex;
+    justify-content: center;
+}
+.bagian-kanan{
+    width: 60%;
+    padding-left: 30px;
+}
+.isian {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+.tContainer-isian {
+    padding: 50px;
+}
+
+/* Styles for isi .kotak */
+.isian .kotakan {
+    flex-basis: calc(33.33% - 20px);
+    max-width: 300px;
+    height: 80px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+}
+
+/* Styles for isi .kotak img */
+.isian .kotakan img {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 60px;
+}
+
+/* Styles for isi .kotak h3 */
+.isian .kotakan h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styles for isi .kotak .atasSendiri */
+.isian .kotakan .atasSendiri {
+    font-size: 16px;
+    color: black;
+}
+
+/* Styles for daleman */
+.dalemanan {
+    text-align: left;
+    width: 400px;
+}
+.atas-header{
+}
+.atas-p{
+    color: gray;
+}
+.p-info{
+    font-size: 30px;
+    height: 30px;
+}
+.p2-info{
 }
 .course-list {
     display: flex;
