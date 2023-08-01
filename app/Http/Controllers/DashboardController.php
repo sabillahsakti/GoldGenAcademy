@@ -55,11 +55,35 @@ class DashboardController extends Controller
         return view('dashboard.orders.index', compact('orders'));
     }
 
-    public function users()
+    public function editOrder($id)
     {
-        $users = User::all(); // Fetch all courses from the database
-
-        return view('dashboard.users.index', compact('users'));
+        $order = Order::find($id);
+        return view('dashboard.orders.edit', compact('order'));
     }
+
+    public function updateOrder(Request $request, $id)
+    {
+        $order = Order::find($id);
+        $order->user_id = $request->input('user_id');
+        $order->course_id = $request->input('course_id');
+        $order->status = $request->input('status');
+        $order->save();
+
+        $orders = Order::all();
+        return view('dashboard.orders.index', compact('orders'));
+    }
+
+    public function deleteOrder($id)
+    {
+        $order = Order::find($id);
+
+        if (!$order) {
+            return redirect()->route('dashboard.orders.index')->with('error', 'Order not found');
+        }
+
+        $order->delete();
+        return redirect()->route('dashboard.orders.index');
+    }
+
 
 }
