@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\InfoAkunController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -46,3 +47,4 @@ Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('inde
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/submit-recommendation', [RecommendationController::class, 'submit'])->name('submit.recommendation');
+Route::get('/account', [InfoAkunController::class, 'showAccountInfo']);

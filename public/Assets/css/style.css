@@ -1164,3 +1164,18 @@
         font-size: 14px;
     }
 }
+
+.bagian-atas{
+    display: flex;
+    border: solid 1px #e6e6e6;
+    border-style: outset;
+    border-radius: 10px;
+}
+#userimg{
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
