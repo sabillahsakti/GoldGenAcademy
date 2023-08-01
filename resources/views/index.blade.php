@@ -86,38 +86,6 @@
     <div id="scrollBtn" onclick="scrollToTop()">
         &uarr;
     </div>
-    <div class="navbar">
-        <div class="title">
-            GoldGen Academy
-        </div>
-
-        <div class="menu-container">
-            <div class="menu">
-                <a href="home.html">Home</a>
-                <a href="{{ url('about') }}">About</a>
-                <a href="{{ url('courses') }}">Courses</a>
-                <a href="{{ url('testimoni') }}">Testimoni</a>
-            </div>
-
-            <div class="ltalk-container">
-                @if(session('user'))
-                    <div class="dropdown">
-                        <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
-                        <div class="dropdown-content">
-                            <a href="{{ url('account') }}">Info akun</a>
-                            <a href="#">Daftar kelas</a>
-                            <a href="{{ route('logout') }}">Logout</a>
-                        </div>
-                    </div>
-                @else
-                    <button class="ltalk" onclick="window.location.href ='{{url('login')}}';">
-                        Login
-                    </button>
-                @endif
-            </div>
-
-        </div>
-    </div>
 @extends('layout.master')
 
 @section('content')
