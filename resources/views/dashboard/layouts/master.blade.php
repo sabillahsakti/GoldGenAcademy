@@ -80,7 +80,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="{{route('dashboard.orders')}}" class="nav-link">
               <i class="nav-icon fas fa-ellipsis-h"></i>
               <p>Orders</p>
             </a>

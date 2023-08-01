@@ -24,7 +24,9 @@ Route::get('/layout', function () {
 Route::prefix('dashboard')->group(function (){
     Route::get('/courses', [DashboardController::class, 'courses'])->name('dashboard.courses');
     Route::delete('/courses/{id}', [DashboardController::class, 'deletecourses'])->name('delete.courses');
-
+    Route::get('/courses/{id}', [DashboardController::class, 'editcourses'])->name('edit.courses');
+    Route::put('/courses/{id}', [DashboardController::class, 'updatecourses'])->name('update.courses');
+    Route::get('/orders', [DashboardController::class, 'orders'])->name('dashboard.orders');
 });
 
 
