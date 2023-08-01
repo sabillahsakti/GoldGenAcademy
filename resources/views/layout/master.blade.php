@@ -93,7 +93,7 @@
 
         <div class="menu-container">
             <div class="menu">
-                <a href="home.html">Home</a>
+                <a href="{{ url('/')}}">Home</a>
                 <a href="{{ url('about') }}">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
                 <a href="{{ url('testimoni') }}">Testimoni</a>
@@ -104,8 +104,8 @@
                     <div class="dropdown">
                         <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
                         <div class="dropdown-content">
-                            <a href="{{ url('account') }}">Info akun</a>
-                            <a href="#">Daftar kelas</a>
+                            <a href="#">Account Information</a>
+                            <a href="{{ route('myCourses') }}">My Courses</a>
                             <a href="{{ route('logout') }}">Logout</a>
                         </div>
                     </div>
@@ -118,93 +118,50 @@
 
         </div>
     </div>
-@extends('layout.master')
+    <div class="content-wrapper">
+        @yield('content')
+      </div>
+</body>
 
-@section('content')
-    <section class="tengah">
+<footer style="display: flex; align-items: center; justify-content: space-between; padding: 10px 50px;">
+    <div class="left-content">
+        <h1>GoldGen Academy</h1>
+        <div class="pSingkat">
+            <p>
+                
 
-        <div class="dwu">
-            Join Us !
-        </div>
-
-        <div class="desc">
-            6666 People Have Gotten Jobs From Here
-        </div>
-
-        <div class="desc2">
-            With Us Get More Opportunities to Get Jobs in Technology
-        </div>
-
-        <div>
-            <button class="sap" onclick="window.location.href ='{{url('recommendation')}}';">
-                Click to Get Course Recommendation
-            </button>
-        </div>
-
-        <div class="socialMedia">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin"></i>
-        </div>
-
-
-    </section>
-
-    <section class="partner">
-        <div class="tp">
-            Trusted Partner
-        </div>
-
-        <div class="logoPartner">
-            <img src="Assets/images/Microsoft.png" alt="">
-            <img src="Assets/images/gmeet.png" alt="">
-            <img src="Assets/images/zoom.png" alt="">
-        </div>
-    </section>
-
-    <div class="ellipse2"></div>
-
-    <section class="courses">
-        <div class="tulisan">
-
-            <div class="successP">
-                Popular Courses
+            </p>
+            <div class="smf">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-twitter"></i>
             </div>
         </div>
+    </div>
 
-        <div class="gambarP">
-            <div class="frameKiri">
-                <img src="Assets/images/projectimage1.png" alt="">
-                <h1>Website Design</h1>
-                <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
-            </div>
+    <div class="right-content">
+        <div class="contact">
 
-            <div class="frameKanan">
-                <div class="fkAtas">
-                    <img src="Assets/images/projectimage1.png" alt="">
-                    <h1>Website Design</h1>
-                    <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
+            <div class="iconContact">
+                <h2>Contact</h2>
+                <div class="iconItem">
+                    <i class="fas fa-phone"></i>
+                    <span>(406) 555-0120</span>
                 </div>
-                <div class="fkAtas">
-                    <img src="Assets/images/projectimage1.png" alt="">
-                    <h1>Website Design</h1>
-                    <p>Lörem ipsum astrobel sar direlig. Kronde est konfoni med kelig. Terabel pov astrobel sar</p>
+                <div class="iconItem">
+                    <i class="fas fa-envelope"></i>
+                    <span>GoldGen.Academy@gmail.com</span>
+                </div>
+                <div class="iconItem">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Jl. Karang Rejo VII No.9 Wonokromo</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <section class="bawah">
-        <div class="bgBawah">
-            <div class="content">
-                <h1>Join Now With Us</h1>
-                <p>Our company is a very professional company, with friendly service, modern homes and interest course</p>
-            </div>
-            <div class="button-container">
-                <button>Register</button>
-            </div>
-        </div>
-    </section>
 
-@endsection
+</html>
