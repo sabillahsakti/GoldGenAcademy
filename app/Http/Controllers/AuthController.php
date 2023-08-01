@@ -47,7 +47,7 @@ class AuthController extends Controller
             $request->session()->put('user', $user);
 
             if ($user->role == 'admin') {
-                return view('dashboard', ['user' => $user]);
+                return view('dashboard.index', ['user' => $user]);
             } else {
                 return view('index', ['user' => $user]);
             }
