@@ -82,9 +82,11 @@ Route::get('/dashboard', [CourseController::class, 'viewdashboard'])->name('inde
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/submit-recommendation', [RecommendationController::class, 'submit'])->name('submit.recommendation');
-Route::get('/account', [InfoAkunController::class, 'showAccountInfo']);
 
+Route::get('/account', [InfoAkunController::class, 'showAccountInfo']);
 Route::get('/myCourses', [AuthController::class, 'myCourses'])->name('myCourses');
+Route::get('/change-password', [AuthController::class, 'showChangePasswordForm'])->name('changePasswordForm');
+Route::post('/change-password', [AuthController::class, 'changePassword'])->name('changePassword');
 
 Route::get('/certificate/{courseId}', [CertificateController::class, 'showCertificate'])->middleware('auth')->name('certificate');
 Route::get('/download-certificate/{courseId}', [CertificateController::class, 'downloadCertificate'])->middleware('auth')->name('downloadCertificate');

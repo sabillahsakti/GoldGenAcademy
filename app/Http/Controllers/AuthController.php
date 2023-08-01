@@ -67,11 +67,44 @@ class AuthController extends Controller
     }
 
     public function myCourses()
-{
-    // Get the authenticated user's orders along with their related courses
-    $userOrders = Order::where('user_id', auth()->id())->with('course')->get();
+    {
+        // Get the authenticated user's orders along with their related courses
+        $userOrders = Order::where('user_id', auth()->id())->with('course')->get();
 
-    return view('myCourses', ['userOrders' => $userOrders]);
-}
+        return view('myCourses', ['userOrders' => $userOrders]);
+    }
+
+    // Add this method in your UserController.php file
+
+    public function showChangePasswordForm()
+    {
+        // This will return the change password view
+        return view('changePassword');
+    }
+
+    public function changePassword(Request $request)
+    {
+        // Validate the request data
+        $request->validate([
+            'old_password' => 'required',
+            'new_password' => 'required|min:8|confirmed',
+        ]);
+
+        // Get the current authenticated user
+        $user = Auth::user();
+
+        // Check if the old password is correct
+        if (!Hash::check($request->old_password, $user->password)) {
+            return back()->withErrors(['old_password' => 'The provided password does not match our records.']);
+        }
+
+        // Update the user's password
+        $user->password = Hash::make($request->new_password);
+        $user->save();
+
+        // Redirect back with a success message
+        return back()->with('status', 'Password changed successfully.');
+    }
+
 
 }
