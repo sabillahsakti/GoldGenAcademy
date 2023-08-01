@@ -41,20 +41,31 @@ class CourseController extends Controller
             'payment_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // 2MB maximum size
         ]);
 
-        // Store the uploaded image in a public folder
-        $imagePath = $request->file('payment_image')->store('payment_confirmations', 'public');
+        if ($request->file('payment_image')->isValid()) {
+            // Get file from the request
+            $image = $request->file('payment_image');
 
-        // Create a new order record
-        $order = new Order();
-        $order->name = $course->name;
-        $order->user_id = $user->id;
-        $order->course_id = $course->id;
-        $order->payment_image_path = $imagePath;
-        $order->status = 'Pending'; // You can set the initial status as "Pending"
-        $order->save();
+            // Define folder path
+            $folder = 'assets/images/payment_image';
 
-        
+            // Make a file path where image will be stored
+            $filePath = $folder . $image->getClientOriginalName();
+
+            // Upload image
+            $image->move($folder, $image->getClientOriginalName());
+
+            // Create a new order record
+            $order = new Order();
+            $order->name = $course->name;
+            $order->user_id = $user->id;
+            $order->course_id = $course->id;
+            $order->payment_image_path = $filePath;
+            $order->status = 'Pending'; // You can set the initial status as "Pending"
+            $order->save();
+        }
+
         // Redirect the user to a confirmation/thank you page or do other actions
         return redirect('/')->with('success', 'Thank You! Your payment has been confirmed.');
     }
+
 }
