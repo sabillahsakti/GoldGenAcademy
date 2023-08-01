@@ -4,6 +4,7 @@
 
 
 <div class="row">
+  <a style="margin: 1%" href="{{route('create.users')}}" class="float-right btn btn-sm btn-primary">Crete User</a>
 
     <table class="table">
       <thead>
@@ -32,7 +33,7 @@
               <td>  
            
             <button type="button" class="btn btn-danger" onclick="document.getElementById('form-{{$row->id}}').submit()">Hapus</button> 
-            <form id="form-{{$row->id}}" action="{{ route('delete.courses', $row->id) }}" method="POST">
+            <form id="form-{{$row->id}}" action="{{ route('delete.users', $row->id) }}" method="POST">
               @csrf
               @method('delete')
             </form>
