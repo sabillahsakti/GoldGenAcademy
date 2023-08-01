@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CertificateController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/layout', function () {
@@ -64,3 +66,6 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/submit-recommendation', [RecommendationController::class, 'submit'])->name('submit.recommendation');
 
 Route::get('/myCourses', [AuthController::class, 'myCourses'])->name('myCourses');
+
+Route::get('/certificate/{courseId}', [CertificateController::class, 'showCertificate'])->middleware('auth')->name('certificate');
+Route::get('/download-certificate/{courseId}', [CertificateController::class, 'downloadCertificate'])->middleware('auth')->name('downloadCertificate');

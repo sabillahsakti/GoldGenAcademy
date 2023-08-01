@@ -21,7 +21,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
             'address' => $request->address,
             'phone' => $request->phone,
-            'role'=> 'admin',
+            'role'=> 'member',
         ]);
 
         return redirect('login');
@@ -67,11 +67,11 @@ class AuthController extends Controller
     }
 
     public function myCourses()
-    {
-        // Get the authenticated user's orders along with their related courses
-        $userOrders = Order::where('user_id', auth()->id())->with('course')->get();
-        $courses = $userOrders->pluck('course'); // Extract the 'course' relationship from each order
+{
+    // Get the authenticated user's orders along with their related courses
+    $userOrders = Order::where('user_id', auth()->id())->with('course')->get();
 
-        return view('myCourses', ['courses' => $courses]);
-    }
+    return view('myCourses', ['userOrders' => $userOrders]);
+}
+
 }
