@@ -114,8 +114,7 @@
                                 areas, from Kalimantan to eastern Indonesia. Then actively involved in GOJEK in developing
                                 the team. After going through various experiences from various industries, Seto believes
                                 that the human potential in Indonesia is huge but inequality in access to education and
-                                infrastructure is a problem. Therefore, Seto feels that the vision and mission that Binar
-                                Academy has are in line with Seto's values ​​and beliefs to provide access to quality and
+                                infrastructure is a problem. Therefore, Seto feels that the vision and mission that GoldenGen Academy has are in line with Seto's values ​​and beliefs to provide access to quality and
                                 actual education to every corner of Indonesia.
                             </p>
                         </td>
