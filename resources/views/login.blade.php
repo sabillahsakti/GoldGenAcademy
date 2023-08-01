@@ -154,7 +154,7 @@
         <div class="container">
             <div class="flex">
                 <div class="colom kiri">
-                    <img class="cewe-img" src="Assets/images/cewe.jpg" alt="">
+                    <img class="logo" src="Assets/images/logo.png" alt="">
                 </div>
                 <div class="colom kanan">
                     <h2>Log in</h2>

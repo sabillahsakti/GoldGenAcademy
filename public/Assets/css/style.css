@@ -927,13 +927,19 @@
 /* Styles for cewe-img */
 .cewe-img {
     height: 550px;
-    width: 400px;
+    width: 40/0px;
     border-radius: 10px;
 }
 
 /* Styles for cewe-img2 */
 .cewe-img2 {
     height: 550px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.logo {
+    height: 400px;
     width: 400px;
     border-radius: 10px;
 }
