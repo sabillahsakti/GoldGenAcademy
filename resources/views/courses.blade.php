@@ -14,7 +14,7 @@
                 <img src="{{ asset($course->image) }}" alt="Course Image">
                 <h3>{{ $course->name }}</h3>
                 <h5>{{ $course->price }}</h5>
-                <button onclick="window.location.href = '{{ route('courses.purchase', $course->id) }}'">Purchase</button>
+                <button onclick="window.location.href = '{{ Auth::check() ? route('courses.purchase', $course->id) : route('index') }}'">Purchase</button>
             </div>
             @endforeach
         </div>
