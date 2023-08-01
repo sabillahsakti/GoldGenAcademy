@@ -31,7 +31,7 @@
               <td>  
            
             <button type="button" class="btn btn-danger" onclick="document.getElementById('form-{{$row->id}}').submit()">Hapus</button> 
-            <form id="form-{{$row->id}}" action="{{ route('delete.courses', $row->id) }}" method="POST">
+            <form id="form-{{$row->id}}" action="{{ rout('delete.courses', $row->id) }}" method="POST">
               @csrf
               @method('delete')
             </form>
