@@ -16,15 +16,14 @@
        </div>
    <div>
     <div class="mb-3">
-        <label for="nama" class="form-label">Image</label>
-        <input type="text" name="image" class="form-control" aria-describedby="nama"  value="{{$courses->image}}">
-       </div>
-   <div>
-    <div class="mb-3">
         <label for="nama" class="form-label">ID Field</label>
-        <input type="text" name="image" class="form-control" aria-describedby="nama"  value="{{$courses->field_id}}">
-       </div>
-   <div>
+        <select name="area_id" class="form-select form-control" aria-label="Default select example">
+            @foreach ($fields as $field)
+            <option value="{{ $field->id }}">{{ $field->name }}</option>
+            @endforeach 
+        </select>
+    </div>
+    
    
     
 

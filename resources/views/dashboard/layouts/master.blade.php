@@ -98,7 +98,7 @@
               <p>Sign Out</p>
             </a>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            <form id="logout-form" action="{{ route('logout.admin')}}" method="POST">
               @csrf
             </form>
           </li>
