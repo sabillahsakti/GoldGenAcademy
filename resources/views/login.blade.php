@@ -14,112 +14,114 @@
     <script src='main.js'></script>
 
     <style>
+      .login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
 
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-}
+        .container {
+            width: 100%;
+            max-width: 960px;
+            padding: 20px;
+        }
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  padding: 20px;
-}
+        .flex {
+            display: flex;
+        }
 
-.flex {
-  display: flex;
-}
+        .colom {
+            flex: 1;
+        }
 
-.colom {
-  flex: 1;
-}
+        .kiri {
+            padding-right: 20px;
+        }
 
-.kiri {
-  padding-right: 20px;
-}
+        .kanan {
+            padding-left: 20px;
+        }
 
-.kanan {
-  padding-left: 20px;
-}
+        /* Styles for the form */
+        form {
+            width: 100%;
+        }
 
-/* Styles for the form */
-form {
-  width: 100%;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.form-group {
-  margin-bottom: 20px;
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+        /* ... (previously defined CSS rules) ... */
 
-/* ... (previously defined CSS rules) ... */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 10px;
+        }
 
-.button-container {
-  display: inline-block;
-  justify-content: flex-end; /* Adjust this to flex-start, center, or space-between as per your preference */
-  align-items: center;
-  gap: 10px; /* Adjust the gap between buttons */
-}
+        .button-register {
+          margin-left: 135px;
+        }
 
-.button-container button,
-.button-container a {
-  padding: 10px 20px;
-  color: #fff;
-  border: none;
-  border-radius: 40px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+        .button-register a {
+            display: inline-block;
+            padding: 5px 10px;
+            color: red;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
 
-.button-container button {
-  background-color: #007bff;
-}
+        .button-register a:hover {
+            text-decoration: underline;
+        }
 
-.button-container a {
-  background-color: #007bff;
-}
+        button:hover {
+            background-color: #666;
+            /* Darker shade on hover */
+        }
 
-.button-container button:hover,
-.button-container a:hover {
-  background-color: #0056b3; /* Darker shade on hover */
-}
-
-/* ... (previously defined CSS rules) ... */
-
+        /* ... (previously defined CSS rules) ... */
     </style>
 
     <script>
-        window.onscroll = function () {
-            scrollFunction();
-        };
+    window.onscroll = function() {
+        scrollFunction();
+    };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollBtn").style.display = "block";
-            } else {
-                document.getElementById("scrollBtn").style.display = "none";
-            }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("scrollBtn").style.display = "block";
+        } else {
+            document.getElementById("scrollBtn").style.display = "none";
         }
+    }
 
-        function scrollToTop() {
-            document.body.scrollTop = 0; 
-            document.documentElement.scrollTop = 0; 
-        }
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     </script>
 </head>
 
@@ -134,49 +136,62 @@ input[type="password"] {
 
         <div class="menu-container">
             <div class="menu">
-                <a href="{{url('/')}}">Home</a>
-                <a href="about.html">About</a>
+                <a href="{{ url('/')}}">Home</a>
+                <a href="{{ url('about') }}">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
-                <a href="portofolio.html">Testimoni</a>
+                <a href="{{ url('testimoni') }}">Testimoni</a>
             </div>
 
             <div class="ltalk-container">
-                <button class="ltalk" onclick="window.location.href ='order.html';">
-                    Login
-                </button>
+            @if(session('user'))
+                    <div class="dropdown">
+                        <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
+                        <div class="dropdown-content">
+                            <a href="#">Account Information</a>
+                            <a href="{{ route('myCourses') }}">My Courses</a>
+                            <a href="{{ route('logout') }}">Logout</a>
+                        </div>
+                    </div>
+                @else
+                    <button class="ltalk" onclick="window.location.href ='{{url('register')}}';">
+                        Sign up
+                    </button>
+                @endif
             </div>
         </div>
     </div>
 
 
     <section class="login">
+        <style>
+        
+        </style>
         <div class="container">
-          <div class="flex">
-            <div class="colom kiri">
-              <img class="img-fluid object-fit-cover rounded-4 shadow" src="" alt="">
-            </div>
-            <div class="colom kanan">
-                <form action="{{ route('login') }}" method="POST">
-                    @csrf
-                    <div class="form-group">
-                      <label for="username">Alamat Email atau Nama Pengguna:</label>
-                      <input type="text" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Password:</label>
-                      <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="button-container">
+            <div class="flex">
+                <div class="colom kiri">
+                    <img class="logo" src="Assets/images/logo.png" alt="">
+                </div>
+                <div class="colom kanan">
+                  <br>
+                    <h2>Log in</h2>
+                    <form action="{{ route('login') }}" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <label for="username">Email Address</label>
+                            <input type="text" id="email" name="email" placeholder="Email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter password" required>
+                        </div>
                         <button type="submit">Login</button>
-                        <a href="{{url("register")}}" type="button">Register</a>
-                    </div>
-                    <!-- <div>
-                        <a href="{{url("register")}}" type="button" style="display: inline-block; margin-top: 10px; padding: 10px 20px; color: #fff; text-decoration: none; border: none; border-radius: 4px; background-color: #007bff;">Register</a>
-                    </div> -->
+                        <div class="button-register">
+                            <a1>Don't have an account?</a1><a href="{{url("register")}}" type="button">Sign up</a>
+                        </div>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
 </body>
 
