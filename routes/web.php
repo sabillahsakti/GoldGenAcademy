@@ -25,9 +25,11 @@ Route::prefix('dashboard')->group(function (){
     Route::get('/courses', [DashboardController::class, 'courses'])->name('dashboard.courses');
     Route::delete('/courses/{id}', [DashboardController::class, 'deletecourses'])->name('delete.courses');
     Route::get('/courses/{id}', [DashboardController::class, 'editcourses'])->name('edit.courses');
+    Route::get('/create', [DashboardController::class, 'create'])->name('create');
     Route::put('/courses/{id}', [DashboardController::class, 'updatecourses'])->name('update.courses');
     Route::get('/orders', [DashboardController::class, 'orders'])->name('dashboard.orders');
-    Route::get('/users', [DashboardController::class, 'users'])->name('dashboard.users');
+    Route::get('/users', [DashboardController::class, 'user'])->name('dashboard.users');
+    Route::post('/logout', [DashboardController::class, 'logoutadmin'])->name('logout.admin');
 });
 
 
