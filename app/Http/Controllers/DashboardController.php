@@ -138,5 +138,32 @@ class DashboardController extends Controller
         return redirect('login');
     }
 
+    public function createCourse()
+    {
+        return view('dashboard.courses.create');
+    }
+
+    public function storeCourse(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'price' => 'required|integer',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // 2MB maximum size
+            'field_id' => 'required|integer',
+        ]);
+
+        $imageName = time() . '.' . $request->image->extension();  
+        $request->image->move(public_path('images'), $imageName);
+
+        $course = new Course();
+        $course->name = $request->name;
+        $course->price = $request->price;
+        $course->image = $imageName;
+        $course->field_id = $request->field_id;
+        $course->save();
+
+        return redirect()->route('dashboard.courses.index');
+    }
+
 
 }

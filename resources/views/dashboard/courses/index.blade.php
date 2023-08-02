@@ -4,7 +4,7 @@
 
 
 <div class="row">
-<a style="margin: 1%" href="{{route('create.users')}}" class="float-right btn btn-sm btn-primary">Add Courses</a>
+<a style="margin: 1%" href="{{route('dashboard.courses.create')}}" class="float-right btn btn-sm btn-primary">Add Courses</a>
 
     <table class="table">
       <thead>

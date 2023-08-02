@@ -184,10 +184,10 @@
 
         <div class="menu-container">
             <div class="menu">
-                <a href="home.html">Home</a>
+                <a href="{{ url('/')}}">Home</a>
                 <a href="{{ url('about') }}">About</a>
                 <a href="{{ url('courses') }}">Courses</a>
-                <a href="portofolio.html">Testimoni</a>
+                <a href="{{ url('testimoni') }}">Testimoni</a>
             </div>
 
             <div class="ltalk-container">
@@ -195,8 +195,11 @@
                     <div class="dropdown">
                         <button class="ltalk dropdown-btn">{{ session('user')->name }}</button>
                         <div class="dropdown-content">
-                            <a href="#">Info akun</a>
-                            <a href="#">Daftar kelas</a>
+                            <a href="{{ url('account') }}">Account Information</a>
+                            <a href="{{ route('myCourses') }}">My Courses</a>
+                            @if(session('user')->role == "admin")
+                            <a href="{{ url('viewdashboard') }}">Dashboard</a>
+                            @endif
                             <a href="{{ route('logout') }}">Logout</a>
                         </div>
                     </div>
