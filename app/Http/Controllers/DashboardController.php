@@ -118,7 +118,7 @@ class DashboardController extends Controller
         }
 
         $order->delete();
-        return redirect()->route('dashboard.orders.index');
+        return view('dashboard.orders.index', compact('orders'));
     }
 
     //order

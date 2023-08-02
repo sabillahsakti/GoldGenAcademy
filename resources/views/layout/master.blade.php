@@ -106,6 +106,9 @@
                         <div class="dropdown-content">
                             <a href="{{ url('account') }}">Account Information</a>
                             <a href="{{ route('myCourses') }}">My Courses</a>
+                            @if(session('user')->role == "admin")
+                            <a href="{{ url('viewdashboard') }}">Dashboard</a>
+                            @endif
                             <a href="{{ route('logout') }}">Logout</a>
                         </div>
                     </div>

@@ -13,6 +13,10 @@ class AuthController extends Controller
     public function viewregister(){
         return view('register');
     }
+
+    public function viewdashboard(){
+        return view('dashboard.index');
+    }
     //proses register
     public function register(Request $request){
         User::create([

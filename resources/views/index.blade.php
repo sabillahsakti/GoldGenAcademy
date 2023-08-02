@@ -133,7 +133,7 @@
 
     <div class="ellipse2"></div>
 
-    <section class="courses">
+    <!-- <section class="courses">
         <div class="tulisan">
 
             <div class="successP">
@@ -161,7 +161,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="bawah">
         <div class="bgBawah">
