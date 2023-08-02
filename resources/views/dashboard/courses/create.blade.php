@@ -2,6 +2,7 @@
 
 @section('content')
     <form action="{{ route('dashboard.courses.store') }}" method="POST" enctype="multipart/form-data">
+        
         @csrf
         <div class="form-group">
             <label for="name">Course Name:</label>

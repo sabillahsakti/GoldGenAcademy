@@ -25,20 +25,22 @@ class DashboardController extends Controller
         $courses = Course::find($id);
 
         if (!$courses) {
-            return redirect()->route('dashboard.courses')->with('error', 'data tidak ditemukan');
+            return redirect()->route('dashboard.courses')->with('error', 'Course not found');
         }
 
         $courses->delete();
-        return redirect()->route('dashboard.courses');
+        return redirect()->route('dashboard.courses')->with('success', 'Course deleted successfully');
     }
 
+
     public function editcourses($id){
-        $courses = Course::find($id);
-        $fields = Field::select('id','name')->get();
-        // return $destinations;
-        return view('dashboard.courses.edit', compact('courses','fields'));
-
-
+            $courses = Course::find($id);
+            $fields = Field::select('id','name')->get();
+            if (!$courses) {
+                return view('dashboard.courses.create');
+            }
+        
+            return view('dashboard.courses.edit', compact('courses','fields'));
     }
 
 
@@ -114,7 +116,7 @@ class DashboardController extends Controller
         $order = Order::find($id);
 
         if (!$order) {
-            return redirect()->route('dashboard.orders.index')->with('error', 'Order not found');
+            return view('dashboard.index');
         }
 
         $order->delete();
@@ -140,11 +142,13 @@ class DashboardController extends Controller
 
     public function createCourse()
     {
-        return view('dashboard.courses.create');
+        $fields = Field::select('id','name')->get();
+        return view('dashboard.courses.create', compact('fields'));
     }
 
     public function storeCourse(Request $request)
     {
+        
         $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|integer',
@@ -152,17 +156,20 @@ class DashboardController extends Controller
             'field_id' => 'required|integer',
         ]);
 
-        $imageName = time() . '.' . $request->image->extension();  
-        $request->image->move(public_path('images'), $imageName);
+        $image = $request->file('image');
+        $folder = 'Assets/images/';
+
+        $filePath = $folder . $image->getClientOriginalName();
+        $image->move($folder, $image->getClientOriginalName());
 
         $course = new Course();
         $course->name = $request->name;
         $course->price = $request->price;
-        $course->image = $imageName;
+        $course->image = $filePath;
         $course->field_id = $request->field_id;
         $course->save();
 
-        return redirect()->route('dashboard.courses.index');
+        return view('dashboard.index');
     }
 
 

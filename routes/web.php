@@ -110,3 +110,5 @@ Route::put('/dashboard/orders/{id}', [DashboardController::class, 'updateOrder']
 Route::delete('/dashboard/orders/{id}', [DashboardController::class, 'deleteOrder'])->name('delete.courses');
 Route::get('/dashboard/courses/create', [DashboardController::class, 'createCourse'])->name('dashboard.courses.create');
 Route::post('/dashboard/courses/store', [DashboardController::class, 'storeCourse'])->name('dashboard.courses.store');
+
+Route::delete('/dashboard/courses/delete/{id}', [DashboardController::class, 'deletecourses'])->name('delete.courses');

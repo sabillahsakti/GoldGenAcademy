@@ -2,6 +2,7 @@
 
 @section('content')
 
+@if(isset($courses))
 <form action="{{ route('edit.courses', $courses->id) }}" method="POST">
     @csrf
     @method('PUT')
@@ -31,5 +32,5 @@
 <button type="submit" class="btn btn-primary">Submit</button>
     
 </form>
-
+@endif
 @endsection
