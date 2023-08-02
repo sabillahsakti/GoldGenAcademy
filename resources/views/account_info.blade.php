@@ -161,9 +161,9 @@
                 </div>
             </div>
             <div class="bagian-kanan">
-                <p class="p-info">Informasi Akun</p>
-                <p style="color: gray" class="p2-info">Manage your personal information, including phonenumber and email
-                    address where you can be contatcted</p>
+                <p class="p-info">Account Information</p>
+                <p style="color: gray" class="p2-info">Manage your personal information, including phone number and email
+                    address where you can be contacted</p>
                 <div class="isian">
                     <div class="kotakan">
                         <div class="dalemanan">

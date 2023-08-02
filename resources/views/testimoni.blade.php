@@ -120,7 +120,7 @@
         <p class="tContainerHeader-h2">GoldGen Academy will make your future bright</p>
         <div class="tContainer-header">
             <p class="tContainerHeader-p">
-                More than 1 million people rely on GoldenGen Academy aims to enhance skills and expand knowledge.
+                More than 1 million people rely on GoldGen Academy aims to enhance skills and expand knowledge.
             </p>
         </div>
         <div class="tContainer-isi">
