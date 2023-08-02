@@ -26,7 +26,7 @@
           <td>{{$row->user_id}}</td>
           <td>{{$row->course_id}}</td>
           <td>
-            <img style="width: 40%" src="{{ asset('storage/' . $row->payment_image_path) }}" alt="">
+            <img style="width: 40%" src="{{ Asset($row->payment_image_path) }}" alt="">
           </td>
           <td>{{$row->status}}</td>
           <td>{{$row->created_at->diffForHumans()}}</td>
