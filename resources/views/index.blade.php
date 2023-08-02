@@ -90,6 +90,27 @@
 
     @section('content')
     <section class="tengah">
+        <style>
+            .btn-rec {
+                display: flex;
+                justify-content: center;
+            }
+
+            .btn-rec button {
+                display: inline-block;
+                display: flex;
+                background-color: black;
+                color:white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .btn-rec button:hover {
+                background-color: grey;
+            }
+
+        </style>
 
         <div class="dwu">
             Join Us !
@@ -103,8 +124,8 @@
             With Us Get More Opportunities to Get Jobs in Technology
         </div>
 
-        <div>
-            <button class="sap" onclick="window.location.href ='{{url('recommendation')}}';">
+        <div class="btn-rec">
+            <button class="sap" onclick=" window.location.href ='{{url('recommendation')}}';">
                 Click to Get Course Recommendation
             </button>
         </div>
@@ -180,8 +201,8 @@
             }
 
             .button-reg button:hover {
-            background-color: gold;
-        }
+                background-color: gold;
+            }
             </style>
             <div class="content">
                 <h1>Join Now With Us</h1>
@@ -189,7 +210,7 @@
                 </p>
             </div>
             <div class="button-reg">
-                <button onclick="window.location.href ='{{url('register')}}';">Register</button>
+                <button onclick="window.location.href ='{{url('register')}}';">Sign Up Here</button>
             </div>
         </div>
     </section>
