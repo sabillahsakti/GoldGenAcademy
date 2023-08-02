@@ -14,6 +14,10 @@ Route::get('/layout', function () {
     return view('layout.master');
 });
 
+Route::get('/homedashboard', function () {
+    return view('dashboard.index');
+});
+
 
 Route::get('/layout', function () {
     return view('dashboard.layouts.master');
@@ -77,6 +81,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/register', [AuthController::class, 'viewregister']);
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
+Route::get('/viewdashboard', [AuthController::class, 'viewdashboard']);
 Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
@@ -102,3 +107,4 @@ Route::get('/download-certificate/{courseId}', [CertificateController::class, 'd
 
 Route::get('/dashboard/orders/{id}/edit', [DashboardController::class, 'editOrder'])->name('edit.orders');
 Route::put('/dashboard/orders/{id}', [DashboardController::class, 'updateOrder'])->name('update.orders');
+Route::delete('/dashboard/orders/{id}', [DashboardController::class, 'deleteOrder'])->name('delete.courses');
