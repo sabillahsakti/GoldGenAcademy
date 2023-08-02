@@ -14,70 +14,70 @@
     <script src='main.js'></script>
 
     <style>
-        .dropdown {
+    .dropdown {
         position: relative;
         display: inline-block;
     }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
     </style>
 
     <script>
-        window.onscroll = function () {
-            scrollFunction();
-        };
+    window.onscroll = function() {
+        scrollFunction();
+    };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollBtn").style.display = "block";
-            } else {
-                document.getElementById("scrollBtn").style.display = "none";
-            }
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("scrollBtn").style.display = "block";
+        } else {
+            document.getElementById("scrollBtn").style.display = "none";
         }
+    }
 
-        function scrollToTop() {
-            document.body.scrollTop = 0; 
-            document.documentElement.scrollTop = 0; 
-        }
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
-            // Hide the dropdown when clicking outside of it
-            $(document).on('click', function(event) {
-                if (!$(event.target).closest('.dropdown').length) {
-                    $('.dropdown-content').hide();
-                }
-            });
-
-            // Show/hide the dropdown when clicking on the username button
-            $('.dropdown-btn').on('click', function() {
-                $('.dropdown-content').toggle();
-            });
+    $(document).ready(function() {
+        // Hide the dropdown when clicking outside of it
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('.dropdown').length) {
+                $('.dropdown-content').hide();
+            }
         });
+
+        // Show/hide the dropdown when clicking on the username button
+        $('.dropdown-btn').on('click', function() {
+            $('.dropdown-content').toggle();
+        });
+    });
     </script>
 
 </head>
@@ -86,10 +86,31 @@
     <div id="scrollBtn" onclick="scrollToTop()">
         &uarr;
     </div>
-@extends('layout.master')
+    @extends('layout.master')
 
-@section('content')
+    @section('content')
     <section class="tengah">
+        <style>
+            .btn-rec {
+                display: flex;
+                justify-content: center;
+            }
+
+            .btn-rec button {
+                display: inline-block;
+                display: flex;
+                background-color: black;
+                color:white;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .btn-rec button:hover {
+                background-color: grey;
+            }
+
+        </style>
 
         <div class="dwu">
             Join Us !
@@ -103,8 +124,8 @@
             With Us Get More Opportunities to Get Jobs in Technology
         </div>
 
-        <div>
-            <button class="sap" onclick="window.location.href ='{{url('recommendation')}}';">
+        <div class="btn-rec">
+            <button class="sap" onclick=" window.location.href ='{{url('recommendation')}}';">
                 Click to Get Course Recommendation
             </button>
         </div>
@@ -164,15 +185,34 @@
     </section> -->
 
     <section class="bawah">
+
         <div class="bgBawah">
+            <style>
+            .button-reg button {
+                display: flex;
+                background-color: white;
+                padding: 15px;
+                color: black;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                margin-right: 50px;
+
+            }
+
+            .button-reg button:hover {
+                background-color: gold;
+            }
+            </style>
             <div class="content">
                 <h1>Join Now With Us</h1>
-                <p>Our company is a very professional company, with friendly service, modern homes and interest course</p>
+                <p>Our company is a very professional company, with friendly service, modern homes and interest course
+                </p>
             </div>
-            <div class="button-container">
-                <button>Register</button>
+            <div class="button-reg">
+                <button onclick="window.location.href ='{{url('register')}}';">Sign Up Here</button>
             </div>
         </div>
     </section>
 
-@endsection
+    @endsection
