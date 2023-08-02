@@ -4,7 +4,6 @@
 
 
 <div class="row">
-  <a style="margin: 1%" href="{{route('create.users')}}" class="float-right btn btn-sm btn-primary">Crete User</a>
 
     <table class="table">
       <thead>
