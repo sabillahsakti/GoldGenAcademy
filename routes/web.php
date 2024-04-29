@@ -6,6 +6,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InfoAkunController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PaymentController;
 
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -112,3 +113,6 @@ Route::get('/dashboard/courses/create', [DashboardController::class, 'createCour
 Route::post('/dashboard/courses/store', [DashboardController::class, 'storeCourse'])->name('dashboard.courses.store');
 
 Route::delete('/dashboard/courses/delete/{id}', [DashboardController::class, 'deletecourses'])->name('delete.courses');
+
+Route::get('/payment', [PaymentController::class, 'show']);
+Route::post('/pay', [PaymentController::class, 'charge']);

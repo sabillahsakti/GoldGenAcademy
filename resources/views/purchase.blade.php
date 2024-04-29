@@ -4,6 +4,7 @@
 <html>
 
 <head>
+<script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('midtrans.client_key') }}"></script>
     <!-- Add your head content here -->
     <style>
     body {
@@ -127,29 +128,31 @@
             }
             </style>
             <h1>Payment Confirmation</h1>
-            <p>Please send the payment receipt to complete the payment process.</p>
 
-            <form action="{{ route('payment.confirmation', ['id' => $course->id]) }}" method="post"
-                enctype="multipart/form-data">
-                @csrf
-                <div class="payment-form">
-                    <div class="btn-input">
-                        <style>
-                        input {
-                            margin-top: 10px;
-                        }
-                        </style>
-                        <input type="file" name="payment_image" id="payment_image">
-                    </div>
-                    <!-- <label for="payment_image">Upload Payment Image</label> -->
-                    <button type="submit">Confirm Payment</button>
-                </div>
-
-            </form>
-
+            <button id="pay-button">Confirm Payment</button>
         </div>
     </div>
 
+    <script>
+        document.getElementById('pay-button').onclick = function(){
+            fetch('/pay', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                },
+                body: JSON.stringify({
+                    course_id: "{{ $course->id }}",
+                    user_id: "{{ $user->id }}"
+                })
+            })
+            .then(response => response.json())
+            .then(token => {
+                snap.pay(token);
+            });
+        };
+    </script>
 </body>
 
 </html>

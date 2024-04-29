@@ -20,11 +20,6 @@ return new class extends Migration
             $table->string('image');
             $table->unsignedBigInteger('field_id');
             $table->timestamps();
-
-
-
-
-    
         });
     }
 

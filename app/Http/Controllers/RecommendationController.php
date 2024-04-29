@@ -17,7 +17,7 @@ class RecommendationController extends Controller
         $value = (string)$request->input('recommendationInput'); // Convert to string
 
         // Make an API call with the value from the input
-        $response = Http::get('https://api-goldgen.koyeb.app/predik/' . urlencode($value));
+        $response = Http::get('http://127.0.0.1:8080/predik/' . urlencode($value));
         $data = $response->json();
 
         // Extract the values from the API response
